@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Por corpo — BENZA" };
 export default function CorpoPage() {
   return (
     <main>
-      <BodyGrid category={getCategory("por-corpo")!} />
+      <BodyGrid category={getCategory("por-corpo")!} asH1 />
     </main>
   );
 }

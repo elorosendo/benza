@@ -73,7 +73,7 @@ h1, h2, h3, h4 {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid currentColor;
   outline-offset: 2px;
 }
 
@@ -110,4 +110,18 @@ h1 em, h2 em, h3 em {
 .text-ink :is(h1, h2, h3, h4),
 .title-brown {
   color: var(--title);
+}
+
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee-track {
+  animation: marquee 45s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }

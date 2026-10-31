@@ -6,7 +6,7 @@ import { useCart } from "@/lib/cart";
 export function BagLink({ className }: { className?: string }) {
   const { count } = useCart();
   return (
-    <Link href="/sacola" className={className}>
+    <Link href="/sacola" className={`whitespace-nowrap ${className ?? ""}`}>
       Sacola [{count}]
     </Link>
   );

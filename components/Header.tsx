@@ -24,6 +24,7 @@ export function Header({ categories, lines, menuLines }: Props) {
   const [drawer, setDrawer] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -48,7 +49,7 @@ export function Header({ categories, lines, menuLines }: Props) {
     : undefined;
 
   const navLink =
-    "inline-flex min-h-[var(--tap)] items-center text-sm hover:text-accent";
+    "min-h-[var(--tap)] items-center text-sm hover:text-accent";
 
   return (
     <header
@@ -62,21 +63,23 @@ export function Header({ categories, lines, menuLines }: Props) {
     >
       <div className="container-benza flex items-center justify-between gap-8 py-3 lg:py-[18px]">
         {/* Mobile: gaveta */}
-        <button
-          type="button"
-          className="-ml-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center lg:hidden"
-          aria-label="Abrir menu"
-          aria-expanded={drawer}
-          aria-controls="mobile-nav"
-          onClick={() => setDrawer(true)}
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-            <path d="M3 7h18M3 12h18M3 17h18" />
-          </svg>
-        </button>
+        <div className="flex flex-1 lg:hidden">
+          <button
+            type="button"
+            className="-ml-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center"
+            aria-label="Abrir menu"
+            aria-expanded={drawer}
+            aria-controls="mobile-nav"
+            onClick={() => setDrawer(true)}
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
+              <path d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+          </button>
+        </div>
 
         {/* Desktop: categorias */}
-        <nav aria-label="Categorias" className="hidden flex-1 gap-[26px] lg:flex">
+        <nav aria-label="Categorias" className={`hidden flex-1 gap-[26px] lg:flex`}>
           {categories.map((c) => {
             const hasMenu = !!c.groups?.length;
             const isOpen = open === c.slug && hasMenu;
@@ -84,13 +87,19 @@ export function Header({ categories, lines, menuLines }: Props) {
               <Link
                 key={c.slug}
                 href={categoryHref(c.slug)}
-                className={`${navLink} border-b ${
+                className={`inline-flex ${navLink} border-b ${
                   isOpen ? "border-accent text-accent" : "border-transparent"
                 }`}
                 aria-haspopup={hasMenu ? "true" : undefined}
                 aria-expanded={hasMenu ? isOpen : undefined}
                 onMouseEnter={() => show(hasMenu ? c.slug : null)}
                 onFocus={() => show(hasMenu ? c.slug : null)}
+                onKeyDown={(e) => {
+                  if (e.key === "ArrowDown" && hasMenu) {
+                    e.preventDefault();
+                    panelRef.current?.querySelector<HTMLElement>("a")?.focus();
+                  }
+                }}
               >
                 {c.name}
               </Link>
@@ -98,16 +107,19 @@ export function Header({ categories, lines, menuLines }: Props) {
           })}
         </nav>
 
-        <Link href="/" aria-label="BENZA, página inicial" className="block leading-[0]">
+        <Link href="/" aria-label="benza, página inicial" className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
           <Wordmark height={36} priority />
         </Link>
 
-        <div className="flex flex-1 items-center justify-end gap-[22px]">
+        <div className="flex flex-1 items-center justify-end gap-2 lg:gap-[22px]">
           <Link href="/linhas" className={`${navLink} hidden lg:inline-flex`}>
             Linhas
           </Link>
           <Link href="/ask-benza" className={`${navLink} hidden lg:inline-flex`}>
             Ask Benza
+          </Link>
+          <Link href="/aplicacoes" className={`${navLink} hidden lg:inline-flex`}>
+            Aplicações
           </Link>
           <Link
             href="/busca"
@@ -125,7 +137,7 @@ export function Header({ categories, lines, menuLines }: Props) {
 
       {/* Mega menu */}
       {active && (
-        <div className="absolute inset-x-0 top-full hidden border-t border-b border-[var(--sand-line)] bg-deep lg:block">
+        <div ref={panelRef} className="absolute inset-x-0 top-full hidden border-t border-b border-[var(--sand-line)] bg-deep lg:block">
           <div className="container-benza grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 pb-10 pt-9">
             {active.groups!.map((g, i) => (
               <div key={g.label} className="flex flex-col gap-2.5">

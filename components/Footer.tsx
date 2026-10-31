@@ -46,6 +46,7 @@ export function Footer({
           <Link href="/ask-benza" className={link}>Ask Benza</Link>
           <Link href="/approved" className={link}>Como aprovamos</Link>
           <Link href="/sobre" className={link}>Sobre</Link>
+          <Link href="/aplicacoes" className={link}>Aplicações</Link>
           <Link href="/sobre#envio" className={link}>Envio discreto</Link>
         </nav>
       </div>

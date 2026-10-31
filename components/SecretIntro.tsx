@@ -81,7 +81,7 @@ export function SecretIntro() {
     <section
       ref={section}
       aria-label="the good kind of secret"
-      className={`relative bg-ink text-red ${reduced ? "" : "h-[260vh]"}`}
+      className={`relative overflow-x-clip bg-ink text-red ${reduced ? "" : "h-[260vh]"}`}
     >
       <div
         className={`flex flex-col items-center justify-center overflow-hidden ${

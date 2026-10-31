@@ -101,6 +101,7 @@ export function MobileNav({ id, open, onClose, categories }: Props) {
             ["BENZA Approved", "/approved"],
             ["Diário", "/diario"],
             ["Sobre", "/sobre"],
+            ["Aplicações", "/aplicacoes"],
           ].map(([label, href]) => (
             <Link key={href} href={href} onClick={onClose} className="flex min-h-[var(--tap)] items-center text-sm">
               {label}

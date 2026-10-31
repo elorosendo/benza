@@ -44,9 +44,9 @@ export function HomeV1() {
             </div>
             <div className="flex max-w-[400px] flex-col gap-[18px]">
               <span className="label text-accent">Linha N°1 · {penumbra.name}</span>
-              <p className="font-display text-[34px] leading-[1.1]">
+              <h1 className="font-display text-[34px] leading-[1.1]">
                 Marketplace curado de sex wellness. Escolhemos, testamos, aprovamos.
-              </p>
+              </h1>
               <div className="flex flex-wrap gap-2.5">
                 <Link href="/linhas/penumbra" className="btn bg-red text-white hover:opacity-90">
                   Explorar Penumbra

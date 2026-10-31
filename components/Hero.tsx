@@ -28,12 +28,12 @@ export function HeroSplit() {
         </div>
         <div className="relative min-h-[360px] overflow-hidden rounded-brand bg-[#E2D3C2] lg:min-h-[620px]">
           <Image
-            src="/assets/photos/orange.jpg"
-            alt="Mão espremendo laranja, suco escorrendo"
+            src="/assets/photos/hero-ritual.webp"
+            alt="Frascos de óleo e uma barra de sabonete empilhados sobre um ombro"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
-            className="object-cover"
+            className="object-cover [object-position:center_60%]"
           />
         </div>
       </div>

@@ -17,7 +17,7 @@ export function HeaderAlt({
 }) {
   const [drawer, setDrawer] = useState(false);
   const light = variant === 2;
-  const link = "inline-flex min-h-[var(--tap)] items-center text-sm font-medium hover:text-accent";
+  const link = "min-h-[var(--tap)] items-center text-sm font-medium hover:text-accent";
   const linkLight = light ? "hover:!text-accent-dark" : "";
   const mono =
     "inline-flex min-h-[var(--tap)] items-center font-mono text-xs uppercase tracking-[0.08em]";
@@ -46,14 +46,14 @@ export function HeaderAlt({
         </button>
 
         {light && (
-          <Link href="/" aria-label="BENZA, página inicial" className="block leading-[0]">
+          <Link href="/" aria-label="benza, página inicial" className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
             <Wordmark height={30} priority />
           </Link>
         )}
 
         <nav aria-label="Categorias" className={`hidden gap-[26px] lg:flex ${light ? "" : "flex-1"}`}>
           {categories.map((c) => (
-            <Link key={c.slug} href={categoryHref(c.slug)} className={`${link} ${linkLight}`}>
+            <Link key={c.slug} href={categoryHref(c.slug)} className={`inline-flex ${link} ${linkLight}`}>
               {c.name}
             </Link>
           ))}
