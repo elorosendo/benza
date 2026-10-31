@@ -1,22 +1,27 @@
-import Image from "next/image";
+import { getCategories, getLines, getNewApproved } from "@/lib/catalog";
+import { HeroSplit } from "@/components/Hero";
+import { CategoryIndex } from "@/components/CategoryIndex";
+import { BodyGrid } from "@/components/BodyGrid";
+import { LineCards } from "@/components/LineCard";
+import { NewApproved } from "@/components/NewApproved";
+import { ProductCard } from "@/components/ProductCard";
+import { AskBenza } from "@/components/AskBenza";
 
 export default function Home() {
+  const categories = getCategories();
+  const body = categories.find((c) => c.slug === "por-corpo")!;
   return (
-    <main className="container-benza flex flex-1 flex-col items-center justify-center gap-8 py-24 text-center">
-      <Image
-        src="/assets/brand/wordmark-coralsoft.svg"
-        alt="BENZA"
-        width={360}
-        height={93}
-        priority
-      />
-      <Image
-        src="/assets/brand/tagline-sand.svg"
-        alt="the good kind of secret"
-        width={160}
-        height={166}
-      />
-      <p className="label text-sand/75">[Setup concluído — home em construção]</p>
+    <main>
+      <HeroSplit />
+      <CategoryIndex categories={categories} />
+      <BodyGrid category={body} />
+      <LineCards lines={getLines()} />
+      <NewApproved>
+        {getNewApproved().slice(0, 8).map((p) => (
+          <ProductCard key={p.slug} product={p} />
+        ))}
+      </NewApproved>
+      <AskBenza />
     </main>
   );
 }

@@ -1,5 +1,6 @@
 import taxonomyJson from "@/data/taxonomy.json";
 import tokens from "@/tokens.json";
+import productsJson from "@/data/products.sample.json";
 
 export type SubCategory = { slug: string; name: string };
 export type CategoryGroup = { label: string; children: SubCategory[] };
@@ -59,4 +60,75 @@ export const megaMenuLine: Record<string, LineSlug> = {
   "cuidado-intimo": "rio",
   "no-clima": "penumbra",
   "por-corpo": "mata",
+};
+
+// ---------- Produtos ----------
+
+
+export type Product = {
+  slug: string;
+  name: string;
+  brand: string;
+  price: number;
+  category: string;
+  body: string[];
+  line: LineSlug;
+  approved: boolean;
+  isNew: boolean;
+  images: string[];
+  summary: string;
+  review: { works: string[]; doesnt: string[]; testedBy: string; testedFor: string };
+  specs: { material: string; size: string; care: string };
+};
+
+export function getProducts(): Product[] {
+  return productsJson.products as Product[];
+}
+
+export function getSubCategoryName(slug: string): string | undefined {
+  for (const c of getCategories()) {
+    for (const g of c.groups ?? []) {
+      const found = g.children.find((s) => s.slug === slug);
+      if (found) return found.name;
+    }
+  }
+}
+
+export function categorySubSlugs(slug: string): string[] {
+  const c = getCategories().find((x) => x.slug === slug);
+  return c?.groups?.flatMap((g) => g.children.map((s) => s.slug)) ?? [];
+}
+
+export function countInCategory(slug: string): number {
+  const subs = categorySubSlugs(slug);
+  return getProducts().filter((p) => subs.includes(p.category)).length;
+}
+
+export function countInBody(slug: string): number {
+  return getProducts().filter((p) => p.body.includes(slug)).length;
+}
+
+export function getApprovedCount(): number {
+  return getProducts().filter((p) => p.approved).length;
+}
+
+export function getNewApproved(): Product[] {
+  return getProducts().filter((p) => p.approved && p.isNew);
+}
+
+export function formatCount(n: number): string {
+  return `[${String(n).padStart(2, "0")}]`;
+}
+
+// Preço 0 = ainda sem valor definido: mantém o placeholder visível.
+export function formatPrice(price: number): string {
+  if (!price) return "[PREÇO]";
+  return price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+}
+
+export const linePhotoAlt: Record<LineSlug, string> = {
+  penumbra: "Duas pessoas, rostos próximos",
+  mata: "Mulher correndo na floresta",
+  rio: "Pêssego com mel",
+  brasa: "Mãos em luz vermelha",
 };

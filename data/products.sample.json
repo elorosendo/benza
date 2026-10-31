@@ -1,19 +1,36 @@
 {
-  "_note": "Dados de EXEMPLO para o protótipo. Nomes, marcas, preços e textos são placeholders entre colchetes. Gerar ~24 produtos seguindo este schema, distribuídos pelas 4 linhas e pelas categorias de taxonomy.json.",
+  "_note": "Dados de EXEMPLO para o protótipo. Nomes, marcas, preços e textos são placeholders entre colchetes (preço 0 = [PREÇO]).",
   "schema": {
     "slug": "string",
     "name": "string",
     "brand": "string (marca parceira — BENZA não fabrica)",
     "price": "number (BRL)",
     "category": "slug de subcategoria (taxonomy.json)",
-    "body": ["slugs de por-corpo"],
+    "body": [
+      "slugs de por-corpo"
+    ],
     "line": "penumbra | mata | rio | brasa",
     "approved": "boolean — selo BENZA Approved",
     "isNew": "boolean",
-    "images": ["caminhos — usar placeholder até ter fotos de produto"],
+    "images": [
+      "caminhos — usar placeholder até ter fotos de produto"
+    ],
     "summary": "string curta",
-    "review": { "works": ["o que funciona"], "doesnt": ["o que não funciona"], "testedBy": "string", "testedFor": "string, ex.: 6 semanas" },
-    "specs": { "material": "string", "size": "string", "care": "string" }
+    "review": {
+      "works": [
+        "o que funciona"
+      ],
+      "doesnt": [
+        "o que não funciona"
+      ],
+      "testedBy": "string",
+      "testedFor": "string, ex.: 6 semanas"
+    },
+    "specs": {
+      "material": "string",
+      "size": "string",
+      "care": "string"
+    }
   },
   "products": [
     {
@@ -22,14 +39,29 @@
       "brand": "[Marca]",
       "price": 0,
       "category": "massagem",
-      "body": ["pele-cabelo"],
+      "body": [
+        "pele-cabelo"
+      ],
       "line": "penumbra",
       "approved": true,
       "isNew": true,
       "images": [],
       "summary": "[Resumo curto do produto]",
-      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
-      "specs": { "material": "[ingredientes]", "size": "100 ml", "care": "[instruções]" }
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[ingredientes]",
+        "size": "100 ml",
+        "care": "[instruções]"
+      }
     },
     {
       "slug": "produto-02",
@@ -37,14 +69,30 @@
       "brand": "[Marca]",
       "price": 0,
       "category": "vibradores",
-      "body": ["clitoris", "vulva"],
+      "body": [
+        "clitoris",
+        "vulva"
+      ],
       "line": "mata",
       "approved": true,
       "isNew": false,
       "images": [],
       "summary": "[Resumo curto do produto]",
-      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
-      "specs": { "material": "[silicone de grau médico]", "size": "[medidas]", "care": "[instruções]" }
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[silicone de grau médico]",
+        "size": "[medidas]",
+        "care": "[instruções]"
+      }
     },
     {
       "slug": "produto-03",
@@ -52,14 +100,32 @@
       "brand": "[Marca]",
       "price": 0,
       "category": "lubrificantes-liquidos",
-      "body": ["vulva", "vagina", "penis", "anus"],
+      "body": [
+        "vulva",
+        "vagina",
+        "penis",
+        "anus"
+      ],
       "line": "rio",
       "approved": true,
       "isNew": false,
       "images": [],
       "summary": "[Resumo curto do produto]",
-      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
-      "specs": { "material": "[ingredientes]", "size": "100 ml", "care": "[instruções]" }
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[ingredientes]",
+        "size": "100 ml",
+        "care": "[instruções]"
+      }
     },
     {
       "slug": "produto-04",
@@ -74,7 +140,624 @@
       "images": [],
       "summary": "[Resumo curto do produto]",
       "review": null,
-      "specs": { "material": "[itens do kit]", "size": "3 itens", "care": "[instruções]" }
+      "specs": {
+        "material": "[itens do kit]",
+        "size": "3 itens",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-05",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "succao-ar",
+      "body": [
+        "vulva",
+        "perineo"
+      ],
+      "line": "mata",
+      "approved": false,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-06",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "dildos",
+      "body": [
+        "anus"
+      ],
+      "line": "rio",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-07",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "anal",
+      "body": [
+        "prostata",
+        "penis"
+      ],
+      "line": "brasa",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-08",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "prazer-compartilhado",
+      "body": [
+        "perineo",
+        "perineo"
+      ],
+      "line": "penumbra",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-09",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "aneis-capas",
+      "body": [
+        "clitoris"
+      ],
+      "line": "mata",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-10",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "arneses",
+      "body": [
+        "vagina",
+        "penis"
+      ],
+      "line": "rio",
+      "approved": false,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-11",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "sensacao-kink",
+      "body": [
+        "penis",
+        "perineo"
+      ],
+      "line": "brasa",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-12",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "para-comecar",
+      "body": [
+        "ponto-g"
+      ],
+      "line": "penumbra",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-13",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "silenciosos",
+      "body": [
+        "pele-cabelo",
+        "penis"
+      ],
+      "line": "mata",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-14",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "bem-estar-pelvico",
+      "body": [
+        "vulva",
+        "perineo"
+      ],
+      "line": "rio",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-15",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "skincare-intimo",
+      "body": [
+        "anus"
+      ],
+      "line": "brasa",
+      "approved": false,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-16",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "higiene",
+      "body": [
+        "prostata",
+        "penis"
+      ],
+      "line": "penumbra",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-17",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "cuidado-hormonal",
+      "body": [
+        "perineo",
+        "perineo"
+      ],
+      "line": "mata",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-18",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "velas",
+      "body": [
+        "clitoris"
+      ],
+      "line": "rio",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-19",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "aromaterapia",
+      "body": [
+        "vagina",
+        "penis"
+      ],
+      "line": "brasa",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-20",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "banho-ervas",
+      "body": [
+        "penis",
+        "perineo"
+      ],
+      "line": "penumbra",
+      "approved": false,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-21",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "livros-cartas",
+      "body": [
+        "ponto-g"
+      ],
+      "line": "mata",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-22",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "arte",
+      "body": [
+        "pele-cabelo",
+        "penis"
+      ],
+      "line": "rio",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-23",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "succao-ar",
+      "body": [
+        "vulva",
+        "perineo"
+      ],
+      "line": "brasa",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
+    },
+    {
+      "slug": "produto-24",
+      "name": "[Nome do produto]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "dildos",
+      "body": [
+        "anus"
+      ],
+      "line": "penumbra",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": {
+        "works": [
+          "[ponto forte]"
+        ],
+        "doesnt": [
+          "[ponto fraco]"
+        ],
+        "testedBy": "[nome]",
+        "testedFor": "[tempo]"
+      },
+      "specs": {
+        "material": "[material]",
+        "size": "[tamanho]",
+        "care": "[instruções]"
+      }
     }
   ]
 }
