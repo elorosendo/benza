@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Fraunces, Hanken_Grotesk, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
+import { CartProvider } from "@/lib/cart";
+import { CartDrawer } from "@/components/CartDrawer";
+import { getProducts } from "@/lib/catalog";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
@@ -28,6 +31,15 @@ export const metadata: Metadata = {
     "Marketplace curado de sex wellness. Selecionamos, testamos e aprovamos.",
 };
 
+const cartProducts = getProducts().map((p) => ({
+  slug: p.slug,
+  name: p.name,
+  brand: p.brand,
+  price: p.price,
+  image: p.images[0],
+  line: p.line,
+}));
+
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
@@ -35,9 +47,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${fraunces.variable} ${hanken.variable} ${dmMono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
-        <SiteHeader />
-        <div className="flex flex-1 flex-col">{children}</div>
-        <SiteFooter />
+        <CartProvider products={cartProducts}>
+          <SiteHeader />
+          <div className="flex flex-1 flex-col">{children}</div>
+          <SiteFooter />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

@@ -211,3 +211,13 @@ export function productsInLine(slug: string): Product[] {
 export function getBodyPart(slug: string): SubCategory | undefined {
   return getBodyParts().find((b) => b.slug === slug);
 }
+
+export function getProduct(slug: string): Product | undefined {
+  return getProducts().find((p) => p.slug === slug);
+}
+
+export function relatedProducts(p: Product, limit = 4): Product[] {
+  return getProducts()
+    .filter((x) => x.slug !== p.slug && x.line === p.line)
+    .slice(0, limit);
+}

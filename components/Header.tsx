@@ -11,6 +11,7 @@ import {
 } from "@/lib/catalog";
 import { Wordmark } from "./Wordmark";
 import { MobileNav } from "./MobileNav";
+import { BagLink } from "./BagLink";
 
 type Props = {
   categories: Category[];
@@ -118,12 +119,7 @@ export function Header({ categories, lines, menuLines }: Props) {
               <path d="M20 20l-4-4" />
             </svg>
           </Link>
-          <Link
-            href="/sacola"
-            className="inline-flex min-h-[var(--tap)] items-center font-mono text-xs uppercase tracking-[0.08em] hover:text-accent"
-          >
-            Sacola [0]
-          </Link>
+          <BagLink className="inline-flex min-h-[var(--tap)] items-center font-mono text-xs uppercase tracking-[0.08em] hover:text-accent" />
         </div>
       </div>
 

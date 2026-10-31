@@ -5,6 +5,7 @@ import { useState } from "react";
 import { categoryHref, type Category } from "@/lib/catalog";
 import { Wordmark } from "./Wordmark";
 import { MobileNav } from "./MobileNav";
+import { BagLink } from "./BagLink";
 
 // Headers das variações V2 (Dia, claro) e V3 (Expressiva, Mata). Sem mega menu, como na referência.
 export function HeaderAlt({
@@ -66,13 +67,13 @@ export function HeaderAlt({
         {light ? (
           <div className="flex items-center gap-[18px]">
             <Link href="/busca" className={`${mono} hidden sm:inline-flex ${linkLight}`}>Buscar</Link>
-            <Link href="/sacola" className={`${mono} ${linkLight}`}>Sacola [0]</Link>
+            <BagLink className={`${mono} ${linkLight}`} />
           </div>
         ) : (
           <div className="flex items-center gap-[22px]">
             <Link href="/ask-benza" className={`${link} hidden lg:inline-flex`}>Ask Benza</Link>
             <Link href="/linhas" className={`${italic} hidden hover:text-accent lg:inline-flex`}>(Linhas)</Link>
-            <Link href="/sacola" className={`${mono} hover:text-accent`}>Sacola [0]</Link>
+            <BagLink className={`${mono} hover:text-accent`} />
           </div>
         )}
       </div>
