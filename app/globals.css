@@ -1,7 +1,41 @@
 @import "tailwindcss";
 @import "../tokens.css";
 
+@font-face {
+  font-family: "Gaya";
+  src: url("/fonts/gaya/gaya-400.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gaya";
+  src: url("/fonts/gaya/gaya-400-italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gaya";
+  src: url("/fonts/gaya/gaya-500.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gaya";
+  src: url("/fonts/gaya/gaya-500-italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
 @theme inline {
+  --color-red: var(--red);
+  --color-deep: var(--deep);
+  --color-burgundy: var(--burgundy);
+  --color-olive: var(--olive);
+  --radius-brand: var(--radius);
   --color-ink: var(--ink);
   --color-ink-muted: var(--ink-muted);
   --color-cream: var(--cream);
@@ -14,7 +48,7 @@
   --color-line-accent: var(--line-accent);
   --color-line-text: var(--line-text);
 
-  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-display: "Gaya", var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-hanken), "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-dm-mono), ui-monospace, monospace;
 
@@ -62,6 +96,7 @@ h1 em, h2 em, h3 em {
 
 .btn {
   display: inline-flex;
+  border-radius: 12px;
   min-height: 48px;
   align-items: center;
   padding: 0 24px;
@@ -69,4 +104,10 @@ h1 em, h2 em, h3 em {
   font-size: 12px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+/* Títulos sobre fundo claro usam o marrom escuro, não o preto. */
+.text-ink :is(h1, h2, h3, h4),
+.title-brown {
+  color: var(--title);
 }

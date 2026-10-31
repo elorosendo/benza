@@ -19,8 +19,6 @@ export type Line = {
   moment: string;
   photo: string;
   blurb: string;
-  wordmark: string;
-  tagline: string;
 };
 
 export function getCategories(): Category[] {
@@ -35,8 +33,6 @@ export function getLines(): Line[] {
     moment: l.moment,
     photo: l.photo,
     blurb: l.blurb,
-    wordmark: l.wordmark,
-    tagline: l.tagline,
   }));
 }
 

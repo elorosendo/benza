@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getCategories, getLines, photoAlt } from "@/lib/catalog";
 import { BodyGrid } from "../BodyGrid";
 import { AskBenza } from "../AskBenza";
-import { Wordmark } from "../Wordmark";
+import { Tagline } from "../Wordmark";
 
 const categoryBlurb: Record<string, string> = {
   prazer: "Vibradores, sucção, dildos, anal, a dois",
@@ -26,15 +26,15 @@ export function HomeV3() {
   const lines = getLines();
 
   return (
-    <main data-line="mata" className="bg-[#262505] text-sand">
+    <main data-line="mata" className="bg-olive text-sand">
       {/* Hero: wordmark gigante + colagem */}
       <section className="container-benza relative lg:h-[820px]">
         <h1 className="pt-4 lg:pt-10">
           <Image
-            src="/assets/brand/wordmark-coralsoft.svg"
-            alt="BENZA"
+            src="/assets/brand/benza-red.svg"
+            alt="benza"
             width={1240}
-            height={322}
+            height={411}
             priority
             className="h-auto w-full"
           />
@@ -46,30 +46,24 @@ export function HomeV3() {
             alt="Boca mordendo manga verde, anéis dourados"
             width={300}
             height={360}
-            className="h-[220px] w-full -rotate-[4deg] object-cover lg:absolute lg:left-[8%] lg:top-[340px] lg:h-[360px] lg:w-[300px]"
+            className="h-[220px] w-full -rotate-[4deg] rounded-brand object-cover lg:absolute lg:left-[8%] lg:top-[340px] lg:h-[360px] lg:w-[300px]"
           />
           <Image
             src="/assets/photos/forest.jpg"
             alt="Mulher de vestido verde correndo na floresta"
             width={260}
             height={460}
-            className="h-[260px] w-full object-cover lg:absolute lg:left-[40%] lg:top-[280px] lg:h-[460px] lg:w-[260px]"
+            className="h-[260px] w-full rounded-brand object-cover lg:absolute lg:left-[40%] lg:top-[280px] lg:h-[460px] lg:w-[260px]"
           />
           <Image
             src="/assets/photos/peach.jpg"
             alt="Pêssego com mel escorrendo"
             width={240}
             height={300}
-            className="h-[200px] w-full rotate-[5deg] object-cover lg:absolute lg:right-[9%] lg:top-[360px] lg:h-[300px] lg:w-[240px]"
+            className="h-[200px] w-full rotate-[5deg] rounded-brand object-cover lg:absolute lg:right-[9%] lg:top-[360px] lg:h-[300px] lg:w-[240px]"
           />
         </div>
-        <Image
-          src="/assets/brand/tagline-olive.svg"
-          alt="the good kind of secret"
-          width={200}
-          height={208}
-          className="hidden brightness-[2.2] lg:absolute lg:left-[30%] lg:top-[600px] lg:block"
-        />
+        <div className="hidden lg:absolute lg:left-[30%] lg:top-[600px] lg:block"><Tagline width={220} /></div>
 
         <div className="mt-10 flex flex-col gap-6 pb-12 lg:absolute lg:bottom-10 lg:right-10 lg:mt-0 lg:max-w-[320px] lg:items-end lg:gap-3.5 lg:p-0 lg:text-right">
           <p className="text-[15px] leading-normal">
@@ -77,7 +71,7 @@ export function HomeV3() {
           </p>
           <Link
             href="/categoria/prazer"
-            className="inline-flex min-h-12 items-center self-start rounded-pill bg-accent px-6 text-sm font-semibold text-[#262505] hover:opacity-90 lg:self-auto"
+            className="inline-flex min-h-12 items-center self-start rounded-pill bg-red px-6 text-sm font-semibold text-white hover:opacity-90 lg:self-auto"
           >
             Começar a explorar
           </Link>
@@ -95,7 +89,7 @@ export function HomeV3() {
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {shown.map((c) => (
             <Link key={c.slug} href={`/categoria/${c.slug}`} className="group flex flex-col gap-3.5">
-              <div className="relative h-[320px] overflow-hidden bg-[#393709] lg:h-[380px]">
+              <div className="relative h-[320px] overflow-hidden rounded-brand bg-[#2F2610] lg:h-[380px]">
                 {c.photo && (
                   <Image
                     src={`/assets/photos/${c.photo}`}

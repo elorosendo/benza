@@ -30,7 +30,7 @@ export function CategoryIndex({ categories }: { categories: Category[] }) {
                   i === rows.length - 1 ? "border-b" : ""
                 }`}
               >
-                <span className="font-display text-[clamp(44px,5.4vw,80px)] leading-none">
+                <span className="title-brown font-display text-[clamp(44px,5.4vw,80px)] leading-none">
                   <Emphasis text={c.name} />
                 </span>
                 <span className="text-[15px] leading-relaxed text-ink-muted">

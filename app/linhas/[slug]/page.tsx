@@ -65,7 +65,7 @@ export default async function LinePage({ params }: { params: Promise<{ slug: str
 
       <section className="border-t border-sand/15">
         <div className="container-benza grid items-center gap-8 py-12 lg:grid-cols-[auto_1fr] lg:gap-16">
-          <Tagline width={140} variant={line.tagline.replace("tagline-", "").replace(".svg", "")} />
+          <Tagline width={200} className="text-line-accent" />
           <div className="flex flex-col">
             <span className="label mb-3 text-line-accent">Outras linhas</span>
             {others.map((o) => (

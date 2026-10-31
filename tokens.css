@@ -1,20 +1,25 @@
-/* BENZA — design tokens (protótipo). Fonte de verdade: tokens.json */
+/* BENZA — design tokens (protótipo, branding v2). Fonte de verdade: tokens.json */
 
 :root {
   /* Base */
   --ink: #260F05;          /* texto escuro / fundo Penumbra */
-  --cream: #F4E9DD;        /* fundo claro (só como FUNDO) */
-  --cream-deep: #EADBC9;   /* fundo claro secundário */
+  --cream: #F0EFEA;        /* fundo claro (só como FUNDO) */
+  --cream-deep: #E6E6E1;   /* fundo claro secundário (cartões) */
   --sand: #DCCBB6;         /* texto claro sobre fundo escuro (NUNCA branco puro) */
   --sand-muted: rgba(220, 203, 182, 0.75);
   --sand-line: rgba(220, 203, 182, 0.14);
   --ink-muted: #4A2E20;
   --ink-line: rgba(38, 15, 5, 0.15);
-  --accent: #E3876A;       /* coral suave — wordmark, labels, CTAs */
-  --accent-dark: #A4472A;  /* coral para texto sobre fundo claro */
+  --accent: #EA8F73;       /* coral claro — texto pequeno sobre fundo escuro (contraste ≥4.5) */
+  --red: #D3301B;          /* vermelho BENZA — logo, selo, preenchimentos e texto grande */
+  --deep: #1A0A03;         /* marrom mais profundo (cartões do selo) */
+  --burgundy: #5E1605;
+  --olive: #423616;
+  --title: #5E1605;        /* títulos sobre fundo claro (marrom escuro, em vez do preto) */
+  --accent-dark: #B32613;  /* vermelho para texto sobre fundo claro (≥4.5) */
 
   /* Tipografia */
-  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-display: "Gaya", "Fraunces", Georgia, serif; /* Gaya só local (licença de teste); Fraunces como substituta */
   --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
   --font-mono: "DM Mono", ui-monospace, monospace;
 
@@ -32,15 +37,15 @@
   --container: 1360px;
   --gutter: 40px;          /* 16px em telas < 640px */
   --section-y: 96px;       /* 64px em telas < 640px */
-  --radius: 0px;           /* cantos retos; pílulas 999px só em chips e inputs */
+  --radius: 16px;          /* cartões e fotos arredondados; pílulas 999px em chips e inputs */
   --tap: 44px;             /* alvo mínimo de toque */
 }
 
 /* Temas por linha — aplicar com <section data-line="penumbra"> etc. */
-[data-line="penumbra"] { --line-bg: #260F05; --line-tone: #411E0E; --line-accent: #E3876A; --line-text: #DCCBB6; }
-[data-line="mata"]     { --line-bg: #262505; --line-tone: #393709; --line-accent: #E3876A; --line-text: #DCCBB6; --line-flame: #E9562E; }
-[data-line="rio"]      { --line-bg: #372B0A; --line-tone: #226B8E; --line-accent: #86AFC0; --line-text: #DCCBB6; }
-[data-line="brasa"]    { --line-bg: #2D110F; --line-tone: #280D0B; --line-accent: #CC8564; --line-text: #DCCBB6; --line-terra: #BA6139; }
+[data-line="penumbra"] { --line-bg: #260F05; --line-tone: #5E1605; --line-accent: #EA8F73; --line-text: #DCCBB6; }
+[data-line="mata"]     { --line-bg: #423616; --line-tone: #2F2610; --line-accent: #EA8F73; --line-text: #DCCBB6; --line-flame: #D3301B; }
+[data-line="rio"]      { --line-bg: #5E1605; --line-tone: #260F05; --line-accent: #EA8F73; --line-text: #DCCBB6; }
+[data-line="brasa"]    { --line-bg: #D3301B; --line-tone: #5E1605; --line-accent: #FFFFFF; --line-text: #FFFFFF; }
 
 @media (max-width: 640px) {
   :root { --gutter: 16px; --section-y: 64px; }

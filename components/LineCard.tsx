@@ -9,7 +9,7 @@ export function LineCard({ line }: { line: Line }) {
     <Link
       href={`/linhas/${line.slug}`}
       data-line={line.slug}
-      className="group flex flex-col bg-line-bg text-line-text"
+      className="group flex flex-col overflow-hidden rounded-brand bg-line-bg text-line-text"
     >
       <div className="relative h-[340px] overflow-hidden">
         <Image

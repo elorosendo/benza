@@ -1,5 +1,5 @@
 {
-  "_note": "Dados de EXEMPLO para o protótipo. Nomes, marcas, preços e textos são placeholders entre colchetes (preço 0 = [PREÇO]).",
+  "_note": "Dados de EXEMPLO para o protótipo. Nomes, marcas, preços e textos são placeholders entre colchetes (preço 0 = [PREÇO]). Fotos em /assets/products são provisórias (referências de terceiros): trocar antes de publicar.",
   "schema": {
     "slug": "string",
     "name": "string",
@@ -45,7 +45,9 @@
       "line": "penumbra",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/oleo.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -76,7 +78,9 @@
       "line": "mata",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -109,7 +113,9 @@
       "line": "rio",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -137,7 +143,9 @@
       "line": "brasa",
       "approved": false,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": null,
       "specs": {
@@ -159,7 +167,9 @@
       "line": "mata",
       "approved": false,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -189,7 +199,9 @@
       "line": "rio",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -220,7 +232,9 @@
       "line": "brasa",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -251,7 +265,9 @@
       "line": "penumbra",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -281,7 +297,9 @@
       "line": "mata",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -312,7 +330,9 @@
       "line": "rio",
       "approved": false,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -343,7 +363,9 @@
       "line": "brasa",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -373,7 +395,9 @@
       "line": "penumbra",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -404,7 +428,9 @@
       "line": "mata",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -435,7 +461,9 @@
       "line": "rio",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -465,7 +493,9 @@
       "line": "brasa",
       "approved": false,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/oleo.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -496,7 +526,9 @@
       "line": "penumbra",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -527,7 +559,9 @@
       "line": "mata",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/oleo.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -557,7 +591,9 @@
       "line": "rio",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -588,7 +624,9 @@
       "line": "brasa",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/oleo.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -619,7 +657,9 @@
       "line": "penumbra",
       "approved": false,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/oleo.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -649,7 +689,9 @@
       "line": "mata",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -680,7 +722,9 @@
       "line": "rio",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/gel.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -711,7 +755,9 @@
       "line": "brasa",
       "approved": true,
       "isNew": true,
-      "images": [],
+      "images": [
+        "/assets/products/rosa.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [
@@ -741,7 +787,9 @@
       "line": "penumbra",
       "approved": true,
       "isNew": false,
-      "images": [],
+      "images": [
+        "/assets/products/vidro.webp"
+      ],
       "summary": "[Resumo curto do produto]",
       "review": {
         "works": [

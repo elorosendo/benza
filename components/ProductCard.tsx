@@ -8,7 +8,7 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <article data-line={product.line} className="flex flex-col gap-2.5">
       <Link href={`/produto/${product.slug}`} className="group flex flex-col gap-2.5">
-        <div className="relative flex aspect-[4/5] items-center justify-center bg-cream font-mono text-[11px] text-[#6A4A3A]">
+        <div className="relative flex aspect-[4/5] items-center justify-center overflow-hidden rounded-brand bg-cream font-mono text-[11px] text-[#6A4A3A]">
           {image ? (
             <Image src={image} alt={product.name} fill sizes="(min-width: 1024px) 25vw, 50vw" className="object-cover" />
           ) : (

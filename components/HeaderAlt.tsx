@@ -27,7 +27,7 @@ export function HeaderAlt({
       className={
         light
           ? "relative z-30 border-b border-ink/15 bg-cream text-ink"
-          : "relative z-30 bg-[#262505] text-sand"
+          : "relative z-30 bg-olive text-sand"
       }
     >
       <div className="container-benza flex items-center justify-between gap-6 py-3 lg:py-[18px]">
@@ -46,7 +46,7 @@ export function HeaderAlt({
 
         {light && (
           <Link href="/" aria-label="BENZA, página inicial" className="block leading-[0]">
-            <Wordmark height={30} color="ink" priority />
+            <Wordmark height={30} priority />
           </Link>
         )}
 

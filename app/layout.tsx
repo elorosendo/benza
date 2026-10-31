@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Hanken_Grotesk, DM_Mono } from "next/font/google";
+import { Fraunces, Hanken_Grotesk, DM_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
   weight: ["400", "500"],
   style: ["normal", "italic"],
@@ -23,7 +23,7 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BENZA — the good kind of secret",
+  title: "benza — the good kind of secret",
   description:
     "Marketplace curado de sex wellness. Selecionamos, testamos e aprovamos.",
 };
@@ -32,7 +32,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${hanken.variable} ${dmMono.variable}`}
+      className={`${fraunces.variable} ${hanken.variable} ${dmMono.variable}`}
     >
       <body className="flex min-h-screen flex-col">
         <SiteHeader />

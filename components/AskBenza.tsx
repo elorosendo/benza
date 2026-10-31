@@ -5,7 +5,7 @@ import { useState } from "react";
 export function AskBenza() {
   const [sent, setSent] = useState(false);
   return (
-    <section className="bg-accent text-[#262505]">
+    <section className="bg-red text-white">
       <div className="container-benza grid items-center gap-8 py-16 sm:py-[88px] lg:grid-cols-2 lg:gap-20">
         <div className="flex flex-col gap-3">
           <span className="label">Ask Benza · conselho de amiga</span>
@@ -29,11 +29,11 @@ export function AskBenza() {
               type="text"
               required
               placeholder="Escreva aqui…"
-              className="min-h-[52px] flex-[1_1_240px] rounded-pill border border-[#262505] bg-transparent px-5 text-base placeholder:text-[#262505]/70"
+              className="min-h-[52px] flex-[1_1_240px] rounded-pill border border-white bg-transparent px-5 text-base text-white placeholder:text-white/80"
             />
             <button
               type="submit"
-              className="min-h-[52px] rounded-pill bg-[#262505] px-[26px] text-sm font-semibold text-sand hover:opacity-90"
+              className="min-h-[52px] rounded-pill bg-white px-[26px] text-sm font-semibold text-red hover:opacity-90"
             >
               Enviar
             </button>

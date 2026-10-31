@@ -24,7 +24,7 @@ export default function LinhasPage() {
         return (
           <section key={l.slug} data-line={l.slug} className="bg-line-bg text-line-text">
             <div className="container-benza grid items-center gap-8 py-12 sm:py-16 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
-              <div className="relative aspect-[4/5] max-h-[560px] overflow-hidden bg-line-tone">
+              <div className="relative aspect-[4/5] max-h-[560px] overflow-hidden rounded-brand bg-line-tone">
                 <Image
                   src={`/assets/photos/${l.photo}`}
                   alt={linePhotoAlt[l.slug]}

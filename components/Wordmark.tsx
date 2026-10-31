@@ -1,27 +1,23 @@
 import Image from "next/image";
 
-// Proporções reais dos SVGs de assets/brand (viewBox).
-const WORDMARK_RATIO = 12623 / 3273;
+// Proporção do SVG do logo (viewBox 802 x 266).
+const WORDMARK_RATIO = 802 / 266;
 
-type Background = "dark" | "light";
+type Color = "red" | "white" | "ink";
 
 export function Wordmark({
   height = 34,
-  background = "dark",
-  color,
+  color = "red",
   priority = false,
 }: {
   height?: number;
-  background?: Background;
-  color?: "coralsoft" | "sand" | "ink";
+  color?: Color;
   priority?: boolean;
 }) {
-  const file = color ?? (background === "light" ? "ink" : "coralsoft");
-  const src = `/assets/brand/wordmark-${file}.svg`;
   return (
     <Image
-      src={src}
-      alt="BENZA"
+      src={`/assets/brand/benza-${color}.svg`}
+      alt="benza"
       width={Math.round(height * WORDMARK_RATIO)}
       height={height}
       priority={priority}
@@ -30,20 +26,20 @@ export function Wordmark({
   );
 }
 
+// A tagline é composta na fonte de display (Gaya Italic, com Fraunces como substituta).
 export function Tagline({
   width = 110,
-  variant = "sand",
+  className = "text-red",
 }: {
   width?: number;
-  variant?: string;
+  className?: string;
 }) {
-  const RATIO = 5095 / 5299;
   return (
-    <Image
-      src={`/assets/brand/tagline-${variant}.svg`}
-      alt="the good kind of secret"
-      width={width}
-      height={Math.round(width / RATIO)}
-    />
+    <span
+      className={`block font-display italic leading-none ${className}`}
+      style={{ fontSize: Math.round(width / 6.2) }}
+    >
+      the good kind of secret
+    </span>
   );
 }

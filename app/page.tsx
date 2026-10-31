@@ -7,6 +7,7 @@ import { LineCards } from "@/components/LineCard";
 import { NewApproved } from "@/components/NewApproved";
 import { ProductCard } from "@/components/ProductCard";
 import { AskBenza } from "@/components/AskBenza";
+import { SecretIntro } from "@/components/SecretIntro";
 import { HomeV1 } from "@/components/variants/HomeV1";
 import { HomeV2 } from "@/components/variants/HomeV2";
 import { HomeV3 } from "@/components/variants/HomeV3";
@@ -32,6 +33,7 @@ async function HomeContent({ searchParams }: { searchParams: SearchParams }) {
   const body = categories.find((c) => c.slug === "por-corpo")!;
   return (
     <main>
+      <SecretIntro />
       <HeroSplit />
       <CategoryIndex categories={categories} />
       <BodyGrid category={body} />

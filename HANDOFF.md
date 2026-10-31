@@ -1,5 +1,7 @@
 # BENZA — Handoff para protótipo navegável
 
+> **Atualização — branding v2 (out/2026):** o novo branding (logo "benza" em minúsculas, selo Approved, vermelho `#D3301B`, cartões arredondados, Gaya nos títulos) substitui as regras da §3 e as cores das linhas da §4. A fonte de verdade agora é `tokens.json`/`tokens.css`. Logos e selo ficam em `public/assets/brand/` (originais em `assets/brand-v2/`). A Gaya está em licença de teste: fica só local em `public/fonts/gaya/` (no `.gitignore`), com Fraunces como substituta pública.
+
 > Para o Claude Code: leia este arquivo inteiro antes de começar. Depois leia `tokens.json`, `tokens.css`, `data/taxonomy.json`, `data/products.sample.json` e abra os HTMLs em `reference/` como referência visual exata.
 
 ## 1. Objetivo

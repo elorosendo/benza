@@ -13,9 +13,7 @@ export function Footer({
   lines: Line[];
 }) {
   const variant = useHomeVariant();
-  const wordmarkColor = variant === 2 ? "sand" : "coralsoft";
-  const taglineVariant = variant === 3 ? "terra" : variant === 2 ? "coralsoft" : "sand";
-  const bg = variant === 3 ? "bg-[#262505]" : "";
+  const bg = variant === 3 ? "bg-olive" : "";
   const link = "inline-flex min-h-[var(--tap)] items-center hover:text-accent lg:min-h-0";
   const title = "label text-accent";
   return (
@@ -23,11 +21,9 @@ export function Footer({
       <div className="container-benza grid grid-cols-2 gap-9 pb-12 pt-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div className="col-span-2 flex flex-col gap-4 lg:col-span-1">
           <div className="self-start">
-            <Wordmark height={30} color={wordmarkColor} />
+            <Wordmark height={30} />
           </div>
-          <div className="opacity-80">
-            <Tagline width={110} variant={taglineVariant} />
-          </div>
+          <Tagline width={150} />
         </div>
         <nav aria-label="Loja" className="flex flex-col gap-1 lg:gap-2">
           <span className={title}>Loja</span>

@@ -40,7 +40,7 @@ export function HomeV1() {
         <div className="absolute inset-x-0 bottom-0">
           <div className="container-benza flex flex-wrap items-end justify-between gap-8 pb-12 lg:pb-16">
             <div className="w-[min(360px,70vw)]">
-              <Tagline width={360} variant="coralsoft" />
+              <Tagline width={360} className="text-white" />
             </div>
             <div className="flex max-w-[400px] flex-col gap-[18px]">
               <span className="label text-accent">Linha N°1 · {penumbra.name}</span>
@@ -48,7 +48,7 @@ export function HomeV1() {
                 Marketplace curado de sex wellness. Escolhemos, testamos, aprovamos.
               </p>
               <div className="flex flex-wrap gap-2.5">
-                <Link href="/linhas/penumbra" className="btn bg-accent text-ink hover:opacity-90">
+                <Link href="/linhas/penumbra" className="btn bg-red text-white hover:opacity-90">
                   Explorar Penumbra
                 </Link>
                 <Link href="/approved" className="btn border border-sand/60 hover:bg-sand hover:text-ink">
@@ -77,7 +77,7 @@ export function HomeV1() {
               <Link
                 key={c.slug}
                 href={categoryHref(c.slug)}
-                className="group relative block h-[360px] overflow-hidden bg-[#411E0E] lg:h-[440px]"
+                className="group relative block h-[360px] overflow-hidden rounded-brand bg-burgundy lg:h-[440px]"
               >
                 {c.photo && (
                   <Image
@@ -88,7 +88,7 @@ export function HomeV1() {
                     className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 )}
-                <div className="absolute inset-x-4 bottom-4 flex items-end justify-between bg-ink p-[18px]">
+                <div className="absolute inset-x-4 bottom-4 flex items-end justify-between rounded-xl bg-ink p-[18px]">
                   <span className="font-display text-[30px] leading-none">{c.name}</span>
                   <span className="font-mono text-[11px] text-accent">{formatCount(count)}</span>
                 </div>
@@ -149,7 +149,7 @@ export function HomeV1() {
         <div className="grid gap-x-4 gap-y-7 sm:grid-cols-2 lg:grid-cols-4">
           {approved.map((p) => (
             <Link key={p.slug} href={`/produto/${p.slug}`} className="group flex flex-col gap-2.5">
-              <div className="flex aspect-[4/5] items-center justify-center bg-[#411E0E] font-mono text-[11px] text-sand/55">
+              <div className="flex aspect-[4/5] items-center justify-center rounded-brand bg-burgundy font-mono text-[11px] text-sand/55">
                 [FOTO]
               </div>
               <span className="font-mono text-[10px] uppercase tracking-[0.1em] text-accent">

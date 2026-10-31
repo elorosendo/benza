@@ -26,7 +26,7 @@ export function HeroSplit() {
             </div>
           </div>
         </div>
-        <div className="relative min-h-[360px] overflow-hidden bg-[#E2D3C2] lg:min-h-[620px]">
+        <div className="relative min-h-[360px] overflow-hidden rounded-brand bg-[#E2D3C2] lg:min-h-[620px]">
           <Image
             src="/assets/photos/orange.jpg"
             alt="Mão espremendo laranja, suco escorrendo"
