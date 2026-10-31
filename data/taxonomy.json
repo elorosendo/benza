@@ -1,0 +1,64 @@
+{
+  "categories": [
+    { "slug": "novidades", "name": "Novidades", "children": [] },
+    { "slug": "prazer", "name": "Prazer", "photo": "hands.jpg", "groups": [
+      { "label": "Prazer", "children": [
+        { "slug": "vibradores", "name": "Vibradores" },
+        { "slug": "succao-ar", "name": "Sucção & ar" },
+        { "slug": "dildos", "name": "Dildos" },
+        { "slug": "anal", "name": "Anal" }
+      ]},
+      { "label": "A dois e mais", "children": [
+        { "slug": "prazer-compartilhado", "name": "Prazer compartilhado" },
+        { "slug": "aneis-capas", "name": "Anéis & capas" },
+        { "slug": "arneses", "name": "Arneses" },
+        { "slug": "sensacao-kink", "name": "Sensação & kink" }
+      ]},
+      { "label": "Seleções", "children": [
+        { "slug": "approved", "name": "BENZA Approved ✓" },
+        { "slug": "para-comecar", "name": "Para começar" },
+        { "slug": "silenciosos", "name": "Silenciosos" },
+        { "slug": "bem-estar-pelvico", "name": "Bem-estar pélvico" }
+      ]}
+    ]},
+    { "slug": "cuidado-intimo", "name": "Cuidado íntimo", "photo": "peach.jpg", "groups": [
+      { "label": "Cuidado íntimo", "children": [
+        { "slug": "skincare-intimo", "name": "Skincare íntimo" },
+        { "slug": "lubrificantes-liquidos", "name": "Lubrificantes & líquidos" },
+        { "slug": "higiene", "name": "Higiene" },
+        { "slug": "cuidado-hormonal", "name": "Cuidado hormonal" }
+      ]}
+    ]},
+    { "slug": "no-clima", "name": "No clima", "photo": "candle.jpg", "groups": [
+      { "label": "No clima", "children": [
+        { "slug": "velas", "name": "Velas" },
+        { "slug": "aromaterapia", "name": "Aromaterapia" },
+        { "slug": "massagem", "name": "Massagem" },
+        { "slug": "banho-ervas", "name": "Banho & ervas" },
+        { "slug": "livros-cartas", "name": "Livros & cartas" },
+        { "slug": "arte", "name": "Arte" },
+        { "slug": "acessorios", "name": "Acessórios" }
+      ]}
+    ]},
+    { "slug": "por-corpo", "name": "Por corpo", "photo": "neck.jpg", "groups": [
+      { "label": "Por corpo", "children": [
+        { "slug": "clitoris", "name": "Clitóris" },
+        { "slug": "vulva", "name": "Vulva" },
+        { "slug": "vagina", "name": "Vagina" },
+        { "slug": "ponto-g", "name": "Ponto G" },
+        { "slug": "penis", "name": "Pênis" },
+        { "slug": "prostata", "name": "Próstata" },
+        { "slug": "anus", "name": "Ânus" },
+        { "slug": "perineo", "name": "Períneo" },
+        { "slug": "pele-cabelo", "name": "Pele & cabelo" }
+      ]}
+    ]}
+  ],
+  "editorial": [
+    { "slug": "linhas", "name": "(Linhas)" },
+    { "slug": "approved", "name": "BENZA Approved" },
+    { "slug": "ask-benza", "name": "Ask Benza" },
+    { "slug": "diario", "name": "Diário" },
+    { "slug": "sobre", "name": "Sobre" }
+  ]
+}

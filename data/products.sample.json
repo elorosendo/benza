@@ -1,0 +1,80 @@
+{
+  "_note": "Dados de EXEMPLO para o protótipo. Nomes, marcas, preços e textos são placeholders entre colchetes. Gerar ~24 produtos seguindo este schema, distribuídos pelas 4 linhas e pelas categorias de taxonomy.json.",
+  "schema": {
+    "slug": "string",
+    "name": "string",
+    "brand": "string (marca parceira — BENZA não fabrica)",
+    "price": "number (BRL)",
+    "category": "slug de subcategoria (taxonomy.json)",
+    "body": ["slugs de por-corpo"],
+    "line": "penumbra | mata | rio | brasa",
+    "approved": "boolean — selo BENZA Approved",
+    "isNew": "boolean",
+    "images": ["caminhos — usar placeholder até ter fotos de produto"],
+    "summary": "string curta",
+    "review": { "works": ["o que funciona"], "doesnt": ["o que não funciona"], "testedBy": "string", "testedFor": "string, ex.: 6 semanas" },
+    "specs": { "material": "string", "size": "string", "care": "string" }
+  },
+  "products": [
+    {
+      "slug": "produto-01",
+      "name": "[Óleo de massagem]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "massagem",
+      "body": ["pele-cabelo"],
+      "line": "penumbra",
+      "approved": true,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
+      "specs": { "material": "[ingredientes]", "size": "100 ml", "care": "[instruções]" }
+    },
+    {
+      "slug": "produto-02",
+      "name": "[Vibrador externo]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "vibradores",
+      "body": ["clitoris", "vulva"],
+      "line": "mata",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
+      "specs": { "material": "[silicone de grau médico]", "size": "[medidas]", "care": "[instruções]" }
+    },
+    {
+      "slug": "produto-03",
+      "name": "[Lubrificante à base d'água]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "lubrificantes-liquidos",
+      "body": ["vulva", "vagina", "penis", "anus"],
+      "line": "rio",
+      "approved": true,
+      "isNew": false,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": { "works": ["[ponto forte]"], "doesnt": ["[ponto fraco]"], "testedBy": "[nome]", "testedFor": "[tempo]" },
+      "specs": { "material": "[ingredientes]", "size": "100 ml", "care": "[instruções]" }
+    },
+    {
+      "slug": "produto-04",
+      "name": "[Kit de bolsa]",
+      "brand": "[Marca]",
+      "price": 0,
+      "category": "acessorios",
+      "body": [],
+      "line": "brasa",
+      "approved": false,
+      "isNew": true,
+      "images": [],
+      "summary": "[Resumo curto do produto]",
+      "review": null,
+      "specs": { "material": "[itens do kit]", "size": "3 itens", "care": "[instruções]" }
+    }
+  ]
+}

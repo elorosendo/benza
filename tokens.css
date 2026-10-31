@@ -1,0 +1,47 @@
+/* BENZA — design tokens (protótipo). Fonte de verdade: tokens.json */
+
+:root {
+  /* Base */
+  --ink: #260F05;          /* texto escuro / fundo Penumbra */
+  --cream: #F4E9DD;        /* fundo claro (só como FUNDO) */
+  --cream-deep: #EADBC9;   /* fundo claro secundário */
+  --sand: #DCCBB6;         /* texto claro sobre fundo escuro (NUNCA branco puro) */
+  --sand-muted: rgba(220, 203, 182, 0.75);
+  --sand-line: rgba(220, 203, 182, 0.14);
+  --ink-muted: #4A2E20;
+  --ink-line: rgba(38, 15, 5, 0.15);
+  --accent: #E3876A;       /* coral suave — wordmark, labels, CTAs */
+  --accent-dark: #A4472A;  /* coral para texto sobre fundo claro */
+
+  /* Tipografia */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, monospace;
+
+  --text-xs: 11px;   /* labels mono, uppercase, letter-spacing .12em */
+  --text-sm: 14px;
+  --text-md: 15px;
+  --text-lg: 17px;
+  --text-xl: 24px;
+  --display-sm: 36px;
+  --display-md: clamp(40px, 4vw, 56px);
+  --display-lg: clamp(56px, 6.4vw, 96px);
+  --display-xl: clamp(56px, 7vw, 110px);
+
+  /* Layout */
+  --container: 1360px;
+  --gutter: 40px;          /* 16px em telas < 640px */
+  --section-y: 96px;       /* 64px em telas < 640px */
+  --radius: 0px;           /* cantos retos; pílulas 999px só em chips e inputs */
+  --tap: 44px;             /* alvo mínimo de toque */
+}
+
+/* Temas por linha — aplicar com <section data-line="penumbra"> etc. */
+[data-line="penumbra"] { --line-bg: #260F05; --line-tone: #411E0E; --line-accent: #E3876A; --line-text: #DCCBB6; }
+[data-line="mata"]     { --line-bg: #262505; --line-tone: #393709; --line-accent: #E3876A; --line-text: #DCCBB6; --line-flame: #E9562E; }
+[data-line="rio"]      { --line-bg: #372B0A; --line-tone: #226B8E; --line-accent: #86AFC0; --line-text: #DCCBB6; }
+[data-line="brasa"]    { --line-bg: #2D110F; --line-tone: #280D0B; --line-accent: #CC8564; --line-text: #DCCBB6; --line-terra: #BA6139; }
+
+@media (max-width: 640px) {
+  :root { --gutter: 16px; --section-y: 64px; }
+}
