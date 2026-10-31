@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 import { CartProvider } from "@/lib/cart";
 import { CartDrawer } from "@/components/CartDrawer";
+import { AgeGate } from "@/components/AgeGate";
 import { getProducts } from "@/lib/catalog";
 
 const fraunces = Fraunces({
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <div className="flex flex-1 flex-col">{children}</div>
           <SiteFooter />
           <CartDrawer />
+          <AgeGate />
         </CartProvider>
       </body>
     </html>
