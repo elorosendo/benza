@@ -1,0 +1,57 @@
+@import "tailwindcss";
+@import "../tokens.css";
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-cream: var(--cream);
+  --color-cream-deep: var(--cream-deep);
+  --color-sand: var(--sand);
+  --color-accent: var(--accent);
+  --color-accent-dark: var(--accent-dark);
+  --color-line-bg: var(--line-bg);
+  --color-line-tone: var(--line-tone);
+  --color-line-accent: var(--line-accent);
+  --color-line-text: var(--line-text);
+
+  --font-display: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-hanken), "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-dm-mono), ui-monospace, monospace;
+
+  --radius-pill: 999px;
+}
+
+html {
+  background: var(--ink);
+  color: var(--sand);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.container-benza {
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
