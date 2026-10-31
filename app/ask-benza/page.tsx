@@ -15,7 +15,7 @@ export default function AskBenzaPage() {
     <main>
       <section className="bg-ink text-sand">
         <div className="container-benza flex flex-col gap-6 py-14 sm:py-20">
-          <span className="label text-accent">Ask benza · conselho de amiga</span>
+          <span className="chip label self-start text-accent">Ask Benza · conselho de amiga</span>
           <h1 className="text-[clamp(56px,7vw,110px)] font-medium leading-[0.9]">
             Pergunte <em>sem vergonha.</em>
           </h1>

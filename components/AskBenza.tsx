@@ -8,7 +8,7 @@ export function AskBenza() {
     <section className="bg-red text-white">
       <div className="container-benza grid items-center gap-8 py-16 sm:py-[88px] lg:grid-cols-2 lg:gap-20">
         <div className="flex flex-col gap-3">
-          <span className="label">Ask Benza · conselho de amiga</span>
+          <span className="chip label self-start">Ask Benza · conselho de amiga</span>
           <p className="font-display text-[clamp(34px,3.4vw,50px)] leading-[1.05]">
             “[Pergunta real da comunidade — o que eu queria que alguém tivesse me dito antes.]”
           </p>

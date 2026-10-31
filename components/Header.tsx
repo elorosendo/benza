@@ -118,6 +118,9 @@ export function Header({ categories, lines, menuLines }: Props) {
           <Link href="/ask-benza" className={`${navLink} hidden lg:inline-flex`}>
             Ask Benza
           </Link>
+          <Link href="/comunidade" className={`${navLink} hidden lg:inline-flex`}>
+            Comunidade
+          </Link>
           <Link href="/aplicacoes" className={`${navLink} hidden lg:inline-flex`}>
             Aplicações
           </Link>

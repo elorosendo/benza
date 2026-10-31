@@ -4,7 +4,7 @@ export function Marquee({ phrases, className = "" }: { phrases: string[]; classN
     <ul className="flex shrink-0 items-center gap-12 pr-12" aria-hidden={hidden || undefined}>
       {phrases.map((p) => (
         <li key={p} className="flex items-center gap-12 whitespace-nowrap">
-          <span className="font-display text-[clamp(48px,7vw,104px)] italic leading-none">{p}</span>
+          <span className="font-brand text-[clamp(48px,7vw,104px)] italic leading-none">{p}</span>
           <span aria-hidden="true" className="text-[0.5em] opacity-60">✦</span>
         </li>
       ))}

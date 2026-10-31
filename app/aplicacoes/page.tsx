@@ -37,8 +37,8 @@ export default function AplicacoesPage() {
     <main className="bg-ink text-sand">
       {/* Abertura */}
       <section className="container-benza flex flex-col gap-8 pb-10 pt-14 sm:pt-20">
-        <span className="label text-accent">[ Aplicações ]</span>
-        <h1 className="font-display text-[clamp(64px,13vw,220px)] font-normal italic leading-[0.88] text-red">
+        <span className="chip label self-start text-accent">Aplicações</span>
+        <h1 className="font-brand text-[clamp(64px,13vw,220px)] font-normal italic leading-[0.88] text-red">
           the good kind of secret
         </h1>
         <div className="flex flex-wrap items-end justify-between gap-6">
@@ -106,7 +106,7 @@ export default function AplicacoesPage() {
       {/* Frase */}
       <section className="bg-deep">
         <div className="container-benza py-20 text-center sm:py-32">
-          <p className="mx-auto max-w-[1000px] font-display text-[clamp(40px,6vw,96px)] italic leading-[1] text-sand">
+          <p className="mx-auto max-w-[1000px] font-brand text-[clamp(40px,6vw,96px)] italic leading-[1] text-sand">
             Não fabricamos. <span className="text-red">Escolhemos.</span>
             <br />
             Testamos. Aprovamos.
@@ -146,7 +146,7 @@ export default function AplicacoesPage() {
 
       {/* Fecho */}
       <section className="container-benza flex flex-col items-start gap-6 py-16 sm:py-24">
-        <p className="max-w-[640px] font-display text-[clamp(32px,4vw,56px)] italic leading-[1.05]">
+        <p className="max-w-[640px] font-brand text-[clamp(32px,4vw,56px)] italic leading-[1.05]">
           Tudo começa num objeto bem escolhido.
         </p>
         <div className="flex flex-wrap gap-2.5">

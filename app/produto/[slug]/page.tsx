@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import {
   formatPrice,
   getBodyPart,
@@ -15,6 +16,9 @@ import {
 import { AddToBag } from "@/components/AddToBag";
 import { ApprovedBadge } from "@/components/ApprovedBadge";
 import { ProductGrid } from "@/components/ProductGrid";
+import { VideoCard } from "@/components/VideoCard";
+import { ShareButtons } from "@/components/ShareButtons";
+import { reviewsForProduct, toCardData } from "@/lib/social";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -27,7 +31,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: p ? `${p.name} — benza` : "benza" };
 }
 
-export default async function ProductPage({ params }: Props) {
+export default function ProductPage(props: Props) {
+  return (
+    <Suspense>
+      <ProductContent {...props} />
+    </Suspense>
+  );
+}
+
+async function ProductContent({ params }: Props) {
   const product = getProduct((await params).slug);
   if (!product) notFound();
   const line = getLine(product.line)!;
@@ -35,6 +47,7 @@ export default async function ProductPage({ params }: Props) {
   const related = relatedProducts(product);
   const bodyParts = product.body.map((b) => getBodyPart(b)).filter(Boolean);
   const { review, specs } = product;
+  const videos = reviewsForProduct(product.slug).map(toCardData);
 
   return (
     <main data-line={product.line} className="bg-line-bg text-line-text">
@@ -117,6 +130,34 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </div>
+
+      {/* Veja o teste */}
+      {videos.length > 0 && (
+        <section className="border-t border-sand/15">
+          <div className="container-benza grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-[minmax(0,320px)_1fr] lg:gap-16">
+            <div className="mx-auto w-full max-w-[320px] lg:mx-0">
+              {videos.slice(0, 1).map((v) => (
+                <VideoCard key={v.id} review={v} />
+              ))}
+            </div>
+            <div className="flex flex-col gap-6">
+              <span className="label text-line-accent">[ Testado pela comunidade ]</span>
+              <h2 className="text-[clamp(40px,4vw,56px)] leading-none">
+                Veja o <em>teste</em>
+              </h2>
+              {videos.map((v) => (
+                <figure key={v.id} className="flex max-w-[520px] flex-col gap-2 border-l border-line-accent pl-5">
+                  <blockquote className="text-2xl leading-snug">“{v.quote}”</blockquote>
+                  <figcaption className="label text-sand/70">
+                    {v.tester} · {v.handle} · testou por {v.testedFor}
+                  </figcaption>
+                </figure>
+              ))}
+              <ShareButtons path={`/produto/${product.slug}`} text={`${product.name} · testado pela comunidade benza.`} />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Review BENZA Approved */}
       {product.approved && (

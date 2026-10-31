@@ -7,11 +7,11 @@ export function HeroSplit() {
     <section className="bg-cream text-ink">
       <div className="container-benza grid gap-4 pt-10 lg:grid-cols-2">
         <div className="flex min-h-[420px] flex-col justify-between gap-10 pb-6 pt-2 lg:min-h-[620px]">
-          <span className="label text-accent-dark">[ Marketplace curado de sex wellness ]</span>
+          <span className="chip label self-start text-accent-dark">Marketplace curado de sex wellness</span>
           <div className="flex flex-col gap-6">
             <h1 className="text-[clamp(56px,6.4vw,96px)] font-medium leading-[0.92] tracking-[-0.01em]">
               O que está aqui, está aqui{" "}
-              <em className="text-accent-dark">porque a gente escolheu.</em>
+              <span className="text-accent-dark">porque a gente escolheu.</span>
             </h1>
             <p className="max-w-[460px] text-[17px] leading-relaxed">
               Prazer, cuidado íntimo e rituais — testados por quem usa antes de ganhar o selo BENZA Approved.

@@ -21,7 +21,7 @@ export function HeaderAlt({
   const linkLight = light ? "hover:!text-accent-dark" : "";
   const mono =
     "inline-flex min-h-[var(--tap)] items-center font-mono text-xs uppercase tracking-[0.08em]";
-  const italic = "inline-flex min-h-[var(--tap)] items-center font-display text-lg italic font-medium";
+  const italic = "inline-flex min-h-[var(--tap)] items-center font-brand text-lg italic font-medium";
 
   return (
     <header

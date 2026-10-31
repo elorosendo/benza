@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { categoryHref, type Category, type Line } from "@/lib/catalog";
 import { Wordmark, Tagline } from "./Wordmark";
+import { socialLinks } from "@/lib/socialLinks";
 import { useHomeVariant } from "@/lib/useHomeVariant";
 
 export function Footer({
@@ -24,6 +25,15 @@ export function Footer({
             <Wordmark height={30} />
           </div>
           <Tagline width={150} />
+          <ul className="flex flex-wrap gap-x-4">
+            {socialLinks.map((s) => (
+              <li key={s.platform}>
+                <a href={s.href} target="_blank" rel="noopener noreferrer" className={link}>
+                  {s.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
         <nav aria-label="Loja" className="flex flex-col gap-1 lg:gap-2">
           <span className={title}>Loja</span>
@@ -46,6 +56,8 @@ export function Footer({
           <Link href="/ask-benza" className={link}>Ask Benza</Link>
           <Link href="/approved" className={link}>Como aprovamos</Link>
           <Link href="/sobre" className={link}>Sobre</Link>
+          <Link href="/quiz" className={link}>Quiz</Link>
+          <Link href="/comunidade" className={link}>Comunidade</Link>
           <Link href="/aplicacoes" className={link}>Aplicações</Link>
           <Link href="/sobre#envio" className={link}>Envio discreto</Link>
         </nav>

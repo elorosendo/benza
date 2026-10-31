@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
 import {
   formatCount,
   getLine,
@@ -23,7 +24,15 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: line ? `${line.name} — BENZA` : "BENZA" };
 }
 
-export default async function LinePage({ params }: { params: Promise<{ slug: string }> }) {
+export default function LinePage(props: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense>
+      <LineContent {...props} />
+    </Suspense>
+  );
+}
+
+async function LineContent({ params }: { params: Promise<{ slug: string }> }) {
   const line = getLine((await params).slug);
   if (!line) notFound();
   const copy = lineCopy[line.slug as LineSlug];
@@ -48,7 +57,7 @@ export default async function LinePage({ params }: { params: Promise<{ slug: str
           <h1 className={`text-[clamp(72px,10vw,160px)] font-medium leading-[0.88] ${accentTitle ? "text-line-accent" : ""}`}>
             {line.name}
           </h1>
-          <p className="font-display text-2xl italic">({copy.poem})</p>
+          <p className="font-brand text-2xl italic">({copy.poem})</p>
           <p className="max-w-[520px] text-[17px] leading-relaxed">{copy.description}</p>
         </div>
       </section>

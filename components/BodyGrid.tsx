@@ -5,7 +5,7 @@ import { countInBody, formatCount, type Category } from "@/lib/catalog";
 export function BodyGrid({ category, tone = "deep", asH1 = false }: { category: Category; tone?: "deep" | "cream"; asH1?: boolean }) {
   const Heading = asH1 ? "h1" : "h2";
   const bg = tone === "cream" ? "bg-cream" : "bg-cream-deep";
-  const hover = tone === "cream" ? "hover:bg-cream-deep" : "hover:bg-cream";
+  
   const parts = category.groups?.flatMap((g) => g.children) ?? [];
   return (
     <section className={`${bg} text-ink`}>
@@ -23,10 +23,10 @@ export function BodyGrid({ category, tone = "deep", asH1 = false }: { category: 
             <Link
               key={p.slug}
               href={`/corpo/${p.slug}`}
-              className={`flex min-h-[120px] items-end justify-between ${bg} p-[22px] ${hover} sm:min-h-[150px]`}
+              className={`part flex min-h-[120px] items-end justify-between ${bg} p-[22px] sm:min-h-[150px]`}
             >
-              <span className="title-brown font-display text-[34px] leading-none">{p.name}</span>
-              <span className="font-mono text-[11px]">{formatCount(countInBody(p.slug))}</span>
+              <span className="part-t title-brown font-display text-[34px] leading-none">{p.name}</span>
+              <span className="part-n font-mono text-[11px]">{formatCount(countInBody(p.slug))}</span>
             </Link>
           ))}
         </div>

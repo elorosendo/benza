@@ -89,7 +89,7 @@ export function SecretIntro() {
         }`}
       >
         <p
-          className="font-display italic leading-[1.05] tracking-[-0.01em]"
+          className="font-brand italic leading-[1.05] tracking-[-0.01em]"
           style={{ fontSize: layout.size }}
           aria-hidden="true"
         >
@@ -120,7 +120,7 @@ export function SecretIntro() {
       <div
         ref={measure}
         aria-hidden="true"
-        className="pointer-events-none invisible absolute left-0 top-0 whitespace-pre font-display italic"
+        className="pointer-events-none invisible absolute left-0 top-0 whitespace-pre font-brand italic"
         style={{ fontSize: 100 }}
       >
         {WORDS.map((w) => (

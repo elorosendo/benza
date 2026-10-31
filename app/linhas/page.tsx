@@ -10,7 +10,7 @@ export default function LinhasPage() {
   return (
     <main className="bg-ink text-sand">
       <section className="container-benza pb-10 pt-12 sm:pt-16">
-        <span className="label text-accent">[ Um sistema, quatro climas ]</span>
+        <span className="chip label self-start text-accent">Um sistema, quatro climas</span>
         <h1 className="mt-4 text-[clamp(56px,7vw,110px)] font-medium leading-[0.9]">
           As quatro <em>(linhas)</em>
         </h1>
@@ -38,7 +38,7 @@ export default function LinhasPage() {
                 <h2 className={`text-[clamp(56px,7vw,96px)] font-medium leading-[0.9] ${accent ? "text-line-accent" : ""}`}>
                   {l.name}
                 </h2>
-                <p className="font-display text-[22px] italic text-sand-muted">({lineCopy[l.slug].poem})</p>
+                <p className="font-brand text-[22px] italic text-sand-muted">({lineCopy[l.slug].poem})</p>
                 <p className="max-w-[460px] text-[17px] leading-relaxed">{lineCopy[l.slug].description}</p>
                 <div className="flex flex-wrap items-center gap-4">
                   <Link href={`/linhas/${l.slug}`} className="btn bg-line-accent text-line-bg hover:opacity-90">

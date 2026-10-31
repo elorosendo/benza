@@ -26,7 +26,7 @@ export function Wordmark({
   );
 }
 
-// A tagline é composta na fonte de display (Gaya Italic, com Fraunces como substituta).
+// A tagline é composta na fonte de display (Gaya Italic).
 export function Tagline({
   width = 110,
   className = "text-red",
@@ -36,7 +36,7 @@ export function Tagline({
 }) {
   return (
     <span
-      className={`block font-display italic leading-none ${className}`}
+      className={`block font-brand italic leading-none ${className}`}
       style={{ fontSize: Math.round(width / 6.2) }}
     >
       the good kind of secret

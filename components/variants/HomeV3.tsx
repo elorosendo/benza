@@ -76,7 +76,7 @@ export function HomeV3() {
             Começar a explorar
           </Link>
         </div>
-        <span className="absolute bottom-12 left-10 hidden font-display text-[26px] italic lg:block">
+        <span className="absolute bottom-12 left-10 hidden font-brand text-[26px] italic lg:block">
           (Linha N°2 · Mata)
         </span>
       </section>
@@ -117,7 +117,7 @@ export function HomeV3() {
 
       {/* Linhas em lista */}
       <section className="container-benza pb-16 pt-12 sm:pb-24">
-        <span className="label mb-5 block text-accent">As linhas</span>
+        <span className="chip label mb-5 text-accent">As linhas</span>
         <div>
           {lines.map((l) => (
             <Link
@@ -129,7 +129,7 @@ export function HomeV3() {
               <span className={`font-display text-5xl leading-none sm:text-[56px] ${l.slug === "penumbra" || l.slug === "mata" ? "text-line-accent" : ""}`}>
                 {l.name}
               </span>
-              <span className={`font-display text-[22px] italic ${l.slug === "rio" || l.slug === "brasa" ? "text-line-accent" : ""}`}>
+              <span className={`font-brand text-[22px] italic ${l.slug === "rio" || l.slug === "brasa" ? "text-line-accent" : ""}`}>
                 ({shortMoment[l.slug]})
               </span>
               <span className="label">N°{l.number} →</span>

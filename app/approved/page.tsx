@@ -19,7 +19,7 @@ export default function ApprovedPage() {
       <section className="bg-ink text-sand">
         <div className="container-benza grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-[1.4fr_1fr]">
           <div className="flex flex-col gap-6">
-            <span className="label text-accent">[ Como aprovamos ]</span>
+            <span className="chip label self-start text-accent">Como aprovamos</span>
             <h1 className="text-[clamp(56px,7vw,110px)] font-medium leading-[0.9]">
               Só entra <em>o que a gente testou.</em>
             </h1>

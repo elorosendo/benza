@@ -15,7 +15,7 @@ export default function DiarioPage() {
     <main>
       <section className="bg-ink text-sand">
         <div className="container-benza flex flex-col gap-6 py-14 sm:py-20">
-          <span className="label text-accent">[ Diário ]</span>
+          <span className="chip label self-start text-accent">Diário</span>
           <h1 className="text-[clamp(56px,7vw,110px)] font-medium leading-[0.9]">
             Guias, rituais <em>e conversas.</em>
           </h1>

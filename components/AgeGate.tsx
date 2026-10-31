@@ -39,7 +39,7 @@ export function AgeGate() {
       onCancel={(e) => e.preventDefault()}
       className="m-auto w-[min(480px,calc(100vw-32px))] rounded-brand bg-ink p-8 text-sand backdrop:bg-black/80 sm:p-10"
     >
-      <p className="label text-accent">[ +18 ]</p>
+      <p className="chip label text-accent">+18</p>
       <h2 id="age-title" className="mt-4 text-5xl leading-[0.95]">
         Você tem <em>18 anos</em> ou mais?
       </h2>

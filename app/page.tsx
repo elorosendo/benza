@@ -7,6 +7,7 @@ import { LineCards } from "@/components/LineCard";
 import { NewApproved } from "@/components/NewApproved";
 import { ProductCard } from "@/components/ProductCard";
 import { AskBenza } from "@/components/AskBenza";
+import { VideoReviews } from "@/components/VideoReviews";
 import { SecretIntro } from "@/components/SecretIntro";
 import { HomeV1 } from "@/components/variants/HomeV1";
 import { HomeV2 } from "@/components/variants/HomeV2";
@@ -38,6 +39,7 @@ async function HomeContent({ searchParams }: { searchParams: SearchParams }) {
       <CategoryIndex categories={categories} />
       <BodyGrid category={body} />
       <LineCards lines={getLines()} />
+      <VideoReviews />
       <NewApproved>
         {getNewApproved().slice(0, 8).map((p) => (
           <ProductCard key={p.slug} product={p} />

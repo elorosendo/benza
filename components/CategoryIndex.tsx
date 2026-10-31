@@ -26,17 +26,17 @@ export function CategoryIndex({ categories }: { categories: Category[] }) {
               <Link
                 key={c.slug}
                 href={categoryHref(c.slug)}
-                className={`group grid items-center gap-x-6 gap-y-2 border-t border-ink/25 py-5 hover:bg-ink/[0.04] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_60px] sm:py-[22px] ${
+                className={`idx group grid items-center gap-x-6 gap-y-2 border-t border-ink/25 py-5 hover:bg-ink/[0.04] sm:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)_60px] sm:py-[22px] ${
                   i === rows.length - 1 ? "border-b" : ""
                 }`}
               >
-                <span className="title-brown font-display text-[clamp(44px,5.4vw,80px)] leading-none">
+                <span className="idx-t title-brown font-display text-[clamp(44px,5.4vw,80px)] leading-none">
                   <Emphasis text={c.name} />
                 </span>
-                <span className="text-[15px] leading-relaxed text-ink-muted">
+                <span className="idx-s text-[15px] leading-relaxed text-ink-muted">
                   {subs.map((s) => s.name).join(" · ")}
                 </span>
-                <span className="font-mono text-xs sm:text-right">{formatCount(count)}</span>
+                <span className="idx-n font-mono text-xs sm:text-right">{formatCount(count)}</span>
               </Link>
             );
           })}

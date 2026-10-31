@@ -43,7 +43,7 @@ export function HomeV1() {
               <Tagline width={360} className="text-white" />
             </div>
             <div className="flex max-w-[400px] flex-col gap-[18px]">
-              <span className="label text-accent">Linha N°1 · {penumbra.name}</span>
+              <span className="chip label self-start text-accent">Linha N°1 · {penumbra.name}</span>
               <h1 className="font-display text-[34px] leading-[1.1]">
                 Marketplace curado de sex wellness. Escolhemos, testamos, aprovamos.
               </h1>
