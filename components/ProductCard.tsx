@@ -20,7 +20,7 @@ export function ProductCard({ product }: { product: Product }) {
           <span className="text-[15px] font-medium group-hover:underline">{product.name}</span>
           <span className="shrink-0 font-mono text-[13px]">{formatPrice(product.price)}</span>
         </div>
-        <span className="text-sm text-ink-muted">
+        <span className="text-sm opacity-75">
           {product.brand} · {getSubCategoryName(product.category)}
         </span>
       </Link>

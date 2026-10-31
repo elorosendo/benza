@@ -139,3 +139,47 @@ export const photoAlt: Record<string, string> = {
   "candle.jpg": "Vela acesa com ervas",
   "neck.jpg": "Pescoço e ombro com pele brilhante",
 };
+
+// ---------- Filtros (estado na URL) ----------
+
+export type FilterParams = {
+  sub?: string;
+  corpo?: string;
+  linha?: string;
+  preco?: string;
+  approved?: string;
+};
+
+export const priceRanges = [
+  { slug: "ate-100", label: "Até R$ 100", min: 0, max: 100 },
+  { slug: "100-250", label: "R$ 100–250", min: 100, max: 250 },
+  { slug: "250-mais", label: "Acima de R$ 250", min: 250, max: Infinity },
+] as const;
+
+// Produto sem preço definido (0) passa por qualquer faixa, para o protótipo não esvaziar a lista.
+export function filterProducts(products: Product[], f: FilterParams): Product[] {
+  const range = priceRanges.find((r) => r.slug === f.preco);
+  return products.filter((p) => {
+    if (f.sub && p.category !== f.sub) return false;
+    if (f.corpo && !p.body.includes(f.corpo)) return false;
+    if (f.linha && p.line !== f.linha) return false;
+    if (f.approved === "1" && !p.approved) return false;
+    if (range && p.price > 0 && (p.price < range.min || p.price >= range.max)) return false;
+    return true;
+  });
+}
+
+export function getBodyParts(): SubCategory[] {
+  const c = getCategories().find((x) => x.slug === "por-corpo");
+  return c?.groups?.flatMap((g) => g.children) ?? [];
+}
+
+export function getCategory(slug: string): Category | undefined {
+  return getCategories().find((c) => c.slug === slug);
+}
+
+export function categoryProducts(slug: string, sub?: string): Product[] {
+  if (slug === "novidades") return getProducts().filter((p) => p.isNew);
+  const subs = sub ? [sub] : categorySubSlugs(slug);
+  return getProducts().filter((p) => subs.includes(p.category));
+}
