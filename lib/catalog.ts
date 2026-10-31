@@ -132,3 +132,10 @@ export const linePhotoAlt: Record<LineSlug, string> = {
   rio: "Pêssego com mel",
   brasa: "Mãos em luz vermelha",
 };
+
+export const photoAlt: Record<string, string> = {
+  "hands.jpg": "Silhueta de braços contra fundo terracota",
+  "peach.jpg": "Pêssego com mel escorrendo",
+  "candle.jpg": "Vela acesa com ervas",
+  "neck.jpg": "Pescoço e ombro com pele brilhante",
+};

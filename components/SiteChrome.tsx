@@ -1,17 +1,20 @@
+import { Suspense } from "react";
 import { getCategories, getLines, megaMenuLine } from "@/lib/catalog";
-import { AnnouncementBar } from "./AnnouncementBar";
-import { Header } from "./Header";
+import { ChromeHeader } from "./ChromeHeader";
 import { Footer } from "./Footer";
 
 export function SiteHeader() {
   return (
-    <>
-      <AnnouncementBar />
-      <Header categories={getCategories()} lines={getLines()} menuLines={megaMenuLine} />
-    </>
+    <Suspense>
+      <ChromeHeader categories={getCategories()} lines={getLines()} menuLines={megaMenuLine} />
+    </Suspense>
   );
 }
 
 export function SiteFooter() {
-  return <Footer categories={getCategories()} lines={getLines()} />;
+  return (
+    <Suspense>
+      <Footer categories={getCategories()} lines={getLines()} />
+    </Suspense>
+  );
 }

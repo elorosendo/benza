@@ -8,16 +8,16 @@ type Background = "dark" | "light";
 export function Wordmark({
   height = 34,
   background = "dark",
+  color,
   priority = false,
 }: {
   height?: number;
   background?: Background;
+  color?: "coralsoft" | "sand" | "ink";
   priority?: boolean;
 }) {
-  const src =
-    background === "light"
-      ? "/assets/brand/wordmark-ink.svg"
-      : "/assets/brand/wordmark-coralsoft.svg";
+  const file = color ?? (background === "light" ? "ink" : "coralsoft");
+  const src = `/assets/brand/wordmark-${file}.svg`;
   return (
     <Image
       src={src}

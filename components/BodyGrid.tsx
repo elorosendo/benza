@@ -2,10 +2,12 @@ import Link from "next/link";
 import { countInBody, formatCount, type Category } from "@/lib/catalog";
 
 // "Conheça (o seu) corpo" (SiteV3).
-export function BodyGrid({ category }: { category: Category }) {
+export function BodyGrid({ category, tone = "deep" }: { category: Category; tone?: "deep" | "cream" }) {
+  const bg = tone === "cream" ? "bg-cream" : "bg-cream-deep";
+  const hover = tone === "cream" ? "hover:bg-cream-deep" : "hover:bg-cream";
   const parts = category.groups?.flatMap((g) => g.children) ?? [];
   return (
-    <section className="bg-cream-deep text-ink">
+    <section className={`${bg} text-ink`}>
       <div className="container-benza py-16 sm:py-24">
         <div className="mb-12 grid items-end gap-6 lg:grid-cols-2 lg:gap-16">
           <h2 className="text-[clamp(56px,7vw,110px)] font-medium uppercase leading-[0.88]">
@@ -20,7 +22,7 @@ export function BodyGrid({ category }: { category: Category }) {
             <Link
               key={p.slug}
               href={`/corpo/${p.slug}`}
-              className="flex min-h-[120px] items-end justify-between bg-cream-deep p-[22px] hover:bg-cream sm:min-h-[150px]"
+              className={`flex min-h-[120px] items-end justify-between ${bg} p-[22px] ${hover} sm:min-h-[150px]`}
             >
               <span className="font-display text-[34px] leading-none">{p.name}</span>
               <span className="font-mono text-[11px]">{formatCount(countInBody(p.slug))}</span>
