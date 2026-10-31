@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Hanken_Grotesk, DM_Mono } from "next/font/google";
 import "./globals.css";
+import { SiteHeader, SiteFooter } from "@/components/SiteChrome";
 
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
@@ -33,7 +34,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="pt-BR"
       className={`${cormorant.variable} ${hanken.variable} ${dmMono.variable}`}
     >
-      <body className="min-h-screen flex flex-col">{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <SiteHeader />
+        <div className="flex flex-1 flex-col">{children}</div>
+        <SiteFooter />
+      </body>
     </html>
   );
 }
