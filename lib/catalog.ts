@@ -183,3 +183,35 @@ export function categoryProducts(slug: string, sub?: string): Product[] {
   const subs = sub ? [sub] : categorySubSlugs(slug);
   return getProducts().filter((p) => subs.includes(p.category));
 }
+
+// Texto editorial das linhas (de reference/Linhas.html).
+export const lineCopy: Record<LineSlug, { poem: string; description: string; cta: string }> = {
+  penumbra: {
+    poem: "baixa luz, uma fonte só, a noite inteira",
+    description: "Óleos de massagem, velas, toys para dois. A linha que abre o site e o manifesto.",
+    cta: "Tudo pro ritual noturno",
+  },
+  mata: {
+    poem: "botânicos, folha, o próprio corpo",
+    description: "Toys de uso solo, óleos botânicos, ervas. A camada brasileira como conteúdo.",
+    cta: "Sozinha primeiro",
+  },
+  rio: {
+    poem: "água, pele, o depois que importa",
+    description: "Lubrificantes à base d'água, higiene íntima, cuidado pós. O registro mais fresco do sistema.",
+    cta: "Depois / cuidado",
+  },
+  brasa: {
+    poem: "a faísca, o convite, a bolsa pronta",
+    description: "Kits de bolsa, perfumes de pele, lubrificantes de viagem. O “keys, lip balm, the good kind of secret”.",
+    cta: "Antes de saber o que vai acontecer",
+  },
+};
+
+export function productsInLine(slug: string): Product[] {
+  return getProducts().filter((p) => p.line === slug);
+}
+
+export function getBodyPart(slug: string): SubCategory | undefined {
+  return getBodyParts().find((b) => b.slug === slug);
+}
