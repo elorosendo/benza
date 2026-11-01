@@ -13,6 +13,7 @@ import {
   type FilterParams,
 } from "@/lib/catalog";
 import { Filters, type FilterGroup } from "@/components/Filters";
+import { TarotCard } from "@/components/TarotCard";
 import { ProductGrid } from "@/components/ProductGrid";
 import { getT } from "@/lib/i18n/server";
 
@@ -57,8 +58,20 @@ async function Content({ params, searchParams }: Props) {
 
   return (
     <main>
-      <section data-line="mata" className="bg-line-bg text-sand">
-        <div className="container-benza flex flex-col gap-6 pb-20 pt-14 sm:pb-28">
+      <section data-line="mata" className="relative overflow-hidden bg-line-bg text-sand">
+        {slug === "clitoris" && (
+          <div className="absolute bottom-6 right-[10%] hidden sm:block lg:right-[14%]">
+            <TarotCard
+              name="clitoris-negative"
+              alt={t("Carta de tarô: {name}", { name: t(part.name) })}
+              width={230}
+              rest={5}
+              tiltZone="self"
+              priority
+            />
+          </div>
+        )}
+        <div className="container-benza relative flex flex-col gap-6 pb-20 pt-14 sm:pb-28">
           <nav aria-label={t("Você está em")} className="label text-sand/70">
             <Link href="/" className="hover:text-accent">{t("Início")}</Link>
             {" / "}

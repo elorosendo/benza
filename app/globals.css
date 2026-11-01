@@ -299,23 +299,34 @@ h1 em, h2 em, h3 em, .font-display em {
   }
 }
 
-/* Carta do cartão "corpo": escondida por padrão, desce da borda de cima ao passar o mouse ou focar. */
+/* Carta do cartão "corpo": escondida por padrão; entra ao passar o mouse ou focar.
+   Cada cartão tem posição e entrada próprias (--r/--t = recuo da direita/topo; --from = pose escondida). */
 .part-card {
   position: absolute;
-  right: 20px;
-  top: -240px;
+  right: var(--r, 20px);
+  top: var(--t, 10px);
   opacity: 0;
   pointer-events: none;
+  transform: var(--from, translateY(-130%));
   transition:
-    top 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.35s ease;
 }
 .part:hover .part-card,
 .part:focus-visible .part-card,
 .part:focus-within .part-card {
-  top: -36px;
   opacity: 1;
+  transform: none;
 }
+.part:nth-child(9n + 1) .part-card { --r: 10px; --t: 16px;  --from: translateY(-130%); }
+.part:nth-child(9n + 2) .part-card { --r: 34px; --t: 34px; --from: translateY(130%); }
+.part:nth-child(9n + 3) .part-card { --r: 6px; --t: 22px; --from: translateX(140%) rotate(12deg); }
+.part:nth-child(9n + 4) .part-card { --r: 40px; --t: 12px;  --from: scale(0.4) rotate(-25deg); }
+.part:nth-child(9n + 5) .part-card { --r: 18px; --t: 30px; --from: translateX(-260%) rotate(-12deg); }
+.part:nth-child(9n + 6) .part-card { --r: 8px; --t: 14px;  --from: translateY(-130%) rotate(18deg); }
+.part:nth-child(9n + 7) .part-card { --r: 36px; --t: 26px; --from: translateY(130%) rotate(-14deg); }
+.part:nth-child(9n + 8) .part-card { --r: 14px; --t: 20px; --from: scale(0.4) rotate(25deg); }
+.part:nth-child(9n + 9) .part-card { --r: 24px; --t: 32px; --from: translateX(140%); }
 @media (prefers-reduced-motion: reduce) {
   .part-card {
     transition: none;
