@@ -1,0 +1,89 @@
+{name} é melhor para {use}. || = || {name} es mejor para {use}. || {name} est idéal pour {use}. || {name} is better for {use}.
+✓ Approved || = || = || = || =
+a dois || = || en pareja || à deux || for two
+A IA está pensando || A IA está a pensar || La IA está pensando || L'IA réfléchit || The AI is thinking
+Ainda estou aprendendo sobre este produto. Veja a review abaixo ou pergunte no Ask Benza. || Ainda estou a aprender sobre este produto. Vê a review abaixo ou pergunta no Ask Benza. || Todavía estoy aprendiendo sobre este producto. Mira la reseña de abajo o pregunta en Ask Benza. || J'apprends encore sur ce produit. Consultez le test ci-dessous ou posez la question dans Ask Benza. || I'm still learning about this product. See the review below or ask in Ask Benza.
+a solo || = || a solas || en solo || solo
+algo discreto para começar || = || algo discreto para empezar || quelque chose de discret pour débuter || something discreet to start with
+Algo para levar na viagem || = || Algo para llevar de viaje || Quelque chose pour le voyage || Something for traveling
+antes de decidir. || = || antes de decidir. || avant de décider. || before you decide.
+boa porta de entrada, sem complicação || = || buena puerta de entrada, sin complicaciones || une bonne porte d'entrée, sans complication || a good starting point, no fuss
+Busca por intenção · IA protótipo || = || Búsqueda por intención · IA prototipo || Recherche par intention · IA prototype || Intent search · AI prototype
+Busca simulada. A IA de verdade entenderá frases livres em qualquer idioma. || = || Búsqueda simulada. La IA real entenderá frases libres en cualquier idioma. || Recherche simulée. La vraie IA comprendra des phrases libres dans n'importe quelle langue. || Simulated search. The real AI will understand free-form sentences in any language.
+cabe na bolsa e viaja bem || cabe na mala e viaja bem || cabe en el bolso y viaja bien || tient dans le sac et voyage bien || fits in your bag and travels well
+Característica || = || = || Caractéristique || Feature
+clima e ritual || = || ambiente y ritual || ambiance et rituel || mood and ritual
+combina com o clima do ritual || = || combina con el ambiente del ritual || s'accorde à l'ambiance du rituel || fits the mood of the ritual
+Como eu limpo? || Como limpo? || ¿Cómo lo limpio? || Comment le nettoyer ? || How do I clean it?
+Comparação entre os dois produtos || = || Comparación entre los dos productos || Comparaison entre les deux produits || Comparison between the two products
+comparar — benza || = || comparar — benza || comparer — benza || compare — benza
+Comparar com outro produto || = || Comparar con otro producto || Comparer avec un autre produit || Compare with another product
+Compare || Compara || Compara || Comparez || Compare
+conforto e cuidado || = || comodidad y cuidado || confort et soin || comfort and care
+Conte o que você procura, do seu jeito. Eu busco só entre os produtos aprovados e mostro de onde veio cada sugestão. || Conta o que procuras, à tua maneira. Procuro só entre os produtos aprovados e mostro de onde veio cada sugestão. || Cuéntame lo que buscas, a tu manera. Busco solo entre los productos aprobados y te muestro de dónde viene cada sugerencia. || Dites-moi ce que vous cherchez, à votre façon. Je cherche uniquement parmi les produits approuvés et je montre d'où vient chaque suggestion. || Tell me what you're looking for, your way. I only search among approved products and show where each suggestion comes from.
+Conversa com a IA da benza || = || Conversación con la IA de benza || Conversation avec l'IA de benza || Conversation with benza's AI
+Costuma ser mais indicado para quem já conhece o básico. Para começar, vale olhar a seleção "Para começar". || = || Suele ser más adecuado para quien ya conoce lo básico. Para empezar, vale la pena mirar la selección "Para empezar". || C'est plutôt pour celles et ceux qui connaissent déjà les bases. Pour débuter, jetez un œil à la sélection « Pour commencer ». || It's usually better for people who already know the basics. To start, take a look at the "To start" selection.
+cuida da pele e do depois || = || cuida la piel y el después || prend soin de la peau et de l'après || cares for skin and aftercare
+cuidado e higiene || = || cuidado e higiene || soin et hygiène || care and hygiene
+Cuidados: {care} || = || Cuidados: {care} || Entretien : {care} || Care: {care}
+Dúvidas rápidas antes de decidir. As respostas vêm só dos dados e das reviews da benza. || = || Dudas rápidas antes de decidir. Las respuestas vienen solo de los datos y las reseñas de benza. || Des questions rapides avant de décider. Les réponses viennent uniquement des données et des tests de benza. || Quick questions before you decide. Answers come only from benza's data and reviews.
+É discreto? || = || ¿Es discreto? || Est-il discret ? || Is it discreet?
+Eles vêm de linhas diferentes: o clima muda, o uso também. || = || Vienen de líneas distintas: cambia el ambiente y también el uso. || Ils viennent de lignes différentes : l'ambiance change, l'usage aussi. || They come from different lines: the mood changes, and so does the use.
+Entendi que você procura: || Percebi que procuras: || Entendí que buscas: || J'ai compris que vous cherchez : || I understand you're looking for:
+Escolha dois produtos e veja as diferenças lado a lado, com um resumo para decidir mais rápido. || Escolhe dois produtos e vê as diferenças lado a lado, com um resumo para decidir mais depressa. || Elige dos productos y mira las diferencias lado a lado, con un resumen para decidir más rápido. || Choisissez deux produits et comparez-les côte à côte, avec un résumé pour décider plus vite. || Pick two products and see the differences side by side, with a summary to decide faster.
+este produto || = || este producto || ce produit || this product
+Ex.: quero algo discreto para a primeira vez || = || Ej.: quiero algo discreto para la primera vez || Ex. : je veux quelque chose de discret pour une première fois || E.g. I want something discreet for the first time
+exploração com material liso || = || exploración con material liso || exploration avec un matériau lisse || exploring with a smooth material
+Fontes || = || Fuentes || Sources || Sources
+IA da benza · protótipo || = || IA de benza · prototipo || IA de benza · prototype || benza AI · prototype
+iniciante || = || principiante || débutant || beginner
+lubrificante || = || lubricante || lubrifiant || lubricant
+lubrificante para viagem || = || lubricante de viaje || lubrifiant de voyage || travel lubricant
+Marca || = || = || Marque || Brand
+material liso, fácil de limpar || = || material liso, fácil de limpiar || matériau lisse, facile à nettoyer || smooth material, easy to clean
+Material: {material}. Como regra geral, lubrificante à base de água é a escolha mais segura. Confira a ficha de material antes de usar. || = || Material: {material}. Como regla general, el lubricante a base de agua es la opción más segura. Revisa la ficha del material antes de usarlo. || Matériau : {material}. En règle générale, un lubrifiant à base d'eau est le choix le plus sûr. Consultez la fiche du matériau avant l'utilisation. || Material: {material}. As a general rule, a water-based lubricant is the safest choice. Check the material sheet before using.
+Me conta um pouco mais: é para você ou a dois? É a primeira vez? Prefere algo discreto? || Conta-me um pouco mais: é para ti ou a dois? É a primeira vez? Preferes algo discreto? || Cuéntame un poco más: ¿es para ti o en pareja? ¿Es la primera vez? ¿Prefieres algo discreto? || Dites-m'en un peu plus : c'est pour vous ou à deux ? C'est la première fois ? Vous préférez quelque chose de discret ? || Tell me a bit more: is it for you or for two? Is it your first time? Do you prefer something discreet?
+momentos a dois || = || momentos en pareja || moments à deux || moments for two
+Nada com esse nome. Tente descrever o que você quer, por exemplo: || Nada com esse nome. Tenta descrever o que queres, por exemplo: || Nada con ese nombre. Prueba a describir lo que quieres, por ejemplo: || Rien de ce nom. Essayez de décrire ce que vous voulez, par exemple : || Nothing by that name. Try describing what you want, for example:
+Não achei uma opção aprovada que combine direitinho. Tente descrever de outro jeito? || Não encontrei uma opção aprovada que combine direitinho. Tenta descrever de outra forma? || No encontré una opción aprobada que encaje bien. ¿Probamos a describirlo de otra forma? || Je n'ai pas trouvé d'option approuvée qui convienne vraiment. Pouvez-vous décrire autrement ? || I couldn't find an approved option that fits just right. Could you describe it another way?
+Nova conversa || = || Nueva conversación || Nouvelle conversation || New conversation
+O envio é discreto, em embalagem sem marca. O nível de ruído deste produto ainda será medido: [dado a definir]. || = || El envío es discreto, en embalaje sin marca. El nivel de ruido de este producto aún se medirá: [dato por definir]. || La livraison est discrète, dans un emballage neutre. Le niveau sonore de ce produit sera mesuré : [donnée à définir]. || Shipping is discreet, in unbranded packaging. This product's noise level is yet to be measured: [data to be defined].
+O que a comunidade achou? || = || ¿Qué dice la comunidad? || Qu'en pense la communauté ? || What did the community think?
+Os dois são da mesma linha, {line}, então combinam entre si. || = || Los dos son de la misma línea, {line}, así que combinan entre sí. || Les deux viennent de la même ligne, {line}, donc ils vont bien ensemble. || Both are from the same line, {line}, so they go well together.
+Os dois servem para quem já conhece o básico. || = || Los dos sirven para quien ya conoce lo básico. || Les deux conviennent à celles et ceux qui connaissent déjà les bases. || Both suit people who already know the basics.
+Os resultados acima já cobrem o que você descreveu. || Os resultados acima já cobrem o que descreveste. || Los resultados de arriba ya cubren lo que describiste. || Les résultats ci-dessus couvrent déjà ce que vous avez décrit. || The results above already cover what you described.
+para começar sozinha, no seu tempo || para começar sozinha, ao teu ritmo || para empezar a solas, a tu ritmo || pour commencer en solo, à votre rythme || to start solo, at your own pace
+Para dúvidas de saúde, converse com um profissional. Eu posso ajudar a escolher produtos, mas não substituo orientação médica. || Para dúvidas de saúde, fala com um profissional. Posso ajudar a escolher produtos, mas não substituo aconselhamento médico. || Para dudas de salud, habla con un profesional. Puedo ayudarte a elegir productos, pero no sustituyo la orientación médica. || Pour les questions de santé, parlez à un professionnel. Je peux vous aider à choisir des produits, mais je ne remplace pas un avis médical. || For health questions, talk to a professional. I can help you pick products, but I don't replace medical advice.
+Pelo que você contou ({tags}), separei {n} opções aprovadas: || Pelo que contaste ({tags}), separei {n} opções aprovadas: || Por lo que me contaste ({tags}), separé {n} opciones aprobadas: || D'après ce que vous m'avez dit ({tags}), j'ai sélectionné {n} options approuvées : || From what you told me ({tags}), I picked {n} approved options:
+pensado para dividir o momento || = || pensado para compartir el momento || pensé pour partager le moment || designed to share the moment
+Perguntar || = || Preguntar || Demander || Ask
+Pergunte qualquer coisa sobre este produto. Eu respondo só com os dados e as reviews da benza. || Pergunta qualquer coisa sobre este produto. Respondo só com os dados e as reviews da benza. || Pregunta lo que quieras sobre este producto. Respondo solo con los datos y las reseñas de benza. || Posez n'importe quelle question sur ce produit. Je réponds uniquement avec les données et les tests de benza. || Ask anything about this product. I answer only with benza's data and reviews.
+Pergunte sobre || Pergunta sobre || Pregunta sobre || Posez vos questions sur || Ask about
+Pergunte sobre este produto… || Pergunta sobre este produto… || Pregunta sobre este producto… || Posez une question sur ce produit… || Ask about this product…
+Posso usar com lubrificante? || = || ¿Puedo usarlo con lubricante? || Puis-je l'utiliser avec un lubrifiant ? || Can I use it with lubricant?
+prazer solo e primeiros passos || = || placer en solitario y primeros pasos || le plaisir en solo et les premiers pas || solo pleasure and first steps
+Produto A || = || Producto A || Produit A || Product A
+Produto B || = || Producto B || Produit B || Product B
+Qual lubrificante você indica? || Que lubrificante recomendas? || ¿Qué lubricante recomiendas? || Quel lubrifiant recommandez-vous ? || Which lubricant do you recommend?
+Resposta simulada. A IA de verdade usará só as reviews da comunidade e não substitui orientação médica. || Resposta simulada. A IA a sério usará só as reviews da comunidade e não substitui aconselhamento médico. || Respuesta simulada. La IA real usará solo las reseñas de la comunidad y no sustituye la orientación médica. || Réponse simulée. La vraie IA utilisera uniquement les tests de la communauté et ne remplace pas un avis médical. || Simulated answer. The real AI will use only community reviews and does not replace medical advice.
+Resumo da IA · protótipo || = || Resumen de la IA · prototipo || Résumé de l'IA · prototype || AI summary · prototype
+Resumo da review: funciona — {works}; não funciona — {doesnt}. || = || Resumen de la reseña: funciona — {works}; no funciona — {doesnt}. || Résumé du test : ça marche — {works} ; ça ne marche pas — {doesnt}. || Review summary: works — {works}; doesn't work — {doesnt}.
+Resumo simulado. A IA de verdade usará só as reviews da comunidade. || Resumo simulado. A IA a sério usará só as reviews da comunidade. || Resumen simulado. La IA real usará solo las reseñas de la comunidad. || Résumé simulé. La vraie IA utilisera uniquement les tests de la communauté. || Simulated summary. The real AI will use only community reviews.
+Review em vídeo · {tester} || = || Reseña en vídeo · {tester} || Test en vidéo · {tester} || Video review · {tester}
+ritual a dois || = || ritual en pareja || rituel à deux || ritual for two
+ritual e clima || = || ritual y ambiente || rituel et ambiance || ritual and mood
+Se você está começando, prefira {name}. || Se estás a começar, prefere {name}. || Si estás empezando, elige {name}. || Si vous débutez, préférez {name}. || If you're just starting, go for {name}.
+Selo || = || Sello || Label || Seal
+Serve para a primeira vez? || = || ¿Sirve para la primera vez? || Convient-il pour une première fois ? || Is it good for a first time?
+seu pedido || o teu pedido || tu petición || votre demande || your request
+silencioso e fácil de guardar || = || silencioso y fácil de guardar || silencieux et facile à ranger || quiet and easy to store
+Sim, é uma boa opção para a primeira vez: {why}. || = || Sí, es una buena opción para la primera vez: {why}. || Oui, c'est un bon choix pour une première fois : {why}. || Yes, it's a good option for a first time: {why}.
+Sim: é da seleção dos silenciosos. O envio é discreto, em embalagem sem marca. || = || Sí: es de la selección de los silenciosos. El envío es discreto, en embalaje sin marca. || Oui : il fait partie de la sélection des silencieux. La livraison est discrète, dans un emballage neutre. || Yes: it's in the quiet selection. Shipping is discreet, in unbranded packaging.
+Sou iniciante e quero algo discreto || = || Soy principiante y quiero algo discreto || Je débute et je veux quelque chose de discret || I'm a beginner and want something discreet
+Sua pergunta || A tua pergunta || Tu pregunta || Votre question || Your question
+textura e duração aprovadas pela comunidade || = || textura y duración aprobadas por la comunidad || texture et durée approuvées par la communauté || texture and longevity approved by the community
+Um presente para a dois || = || Un regalo en pareja || Un cadeau à deux || A gift for a couple
+uso geral || = || uso general || usage général || general use
+viagem || = || viaje || voyage || travel
+vidro || = || vidrio || verre || glass
+discreto e silencioso || = || discreto y silencioso || discret et silencieux || discreet and quiet

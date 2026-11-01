@@ -1,9 +1,9 @@
-import Image from "next/image";
+import { ApprovedStamp } from "./ApprovedStamp";
 
 export function ApprovedBadge() {
   return (
     <span className="absolute left-3 top-3">
-      <Image src="/assets/brand/approved-stamp.svg" alt="benza approved" width={72} height={38} />
+      <ApprovedStamp width={72} />
     </span>
   );
 }

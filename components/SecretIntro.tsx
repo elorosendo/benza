@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/client";
 
 const WORDS = ["the", "good", "kind", "of", "secret"];
 const clamp = (n: number, min = 0, max = 1) => Math.min(max, Math.max(min, n));
@@ -9,6 +10,7 @@ type Layout = { lines: number[][]; size: number };
 
 // "the good kind of secret" em Gaya Italic, na largura toda; cada palavra acende com o scroll.
 export function SecretIntro() {
+  const t = useT();
   const section = useRef<HTMLElement>(null);
   const measure = useRef<HTMLDivElement>(null);
   const words = useRef<(HTMLSpanElement | null)[]>([]);
@@ -80,6 +82,7 @@ export function SecretIntro() {
   return (
     <section
       ref={section}
+      data-no-reveal
       aria-label="the good kind of secret"
       className={`relative overflow-x-clip bg-ink text-red ${reduced ? "" : "h-[260vh]"}`}
     >
@@ -112,8 +115,7 @@ export function SecretIntro() {
           ))}
         </p>
         <span ref={cue} className="label mt-12 text-sand/70">
-          Role para baixo ↓
-        </span>
+          {t("Role para baixo ↓")}</span>
       </div>
 
       {/* medição invisível, no mesmo estilo do texto */}

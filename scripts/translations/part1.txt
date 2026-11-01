@@ -1,0 +1,145 @@
+“[Pergunta real da comunidade — o que eu queria que alguém tivesse me dito antes.]” || “[Pergunta real da comunidade — o que eu queria que alguém me tivesse dito antes.]” || “[Pregunta real de la comunidad — lo que me habría gustado que alguien me dijera antes.]” || « [Vraie question de la communauté — ce que j’aurais aimé qu’on me dise avant.] » || “[Real question from the community — what I wish someone had told me before.]”
+(aprovadas) || = || (aprobadas) || (approuvées) || (approved)
+(escala grande) || = || (gran formato) || (grand format) || (large scale)
+(Linha N°2 · Mata) || = || (Línea N°2 · Mata) || (Ligne N°2 · Mata) || (Line N°2 · Mata)
+(linhas) || = || (líneas) || (lignes) || (lines)
+(Linhas) || = || (Líneas) || (Lignes) || (Lines)
+(Linhas) — BENZA || = || (Líneas) — BENZA || (Lignes) — BENZA || (Lines) — BENZA
+(o seu) || (o teu) || (tu) || (votre) || (your)
+[ Comunidade ] || = || [ Comunidad ] || [ Communauté ] || [ Community ]
+[ Feito pela comunidade ] || = || [ Hecho por la comunidad ] || [ Fait par la communauté ] || [ Made by the community ]
+[ O seu resultado ] || [ O teu resultado ] || [ Tu resultado ] || [ Votre résultat ] || [ Your result ]
+[ Testado pela comunidade ] || = || [ Probado por la comunidad ] || [ Testé par la communauté ] || [ Tested by the community ]
+[Conteúdo só com consentimento] || = || [Contenido solo con consentimiento] || [Contenu uniquement avec consentement] || [Content only with consent]
+[Critérios de curadoria: marca, materiais, segurança.] || = || [Criterios de curaduría: marca, materiales, seguridad.] || [Critères de curation : marque, matériaux, sécurité.] || [Curation criteria: brand, materials, safety.]
+[Curadoria de marcas parceiras.] || [Curadoria de marcas parceiras.] || [Curaduría de marcas asociadas.] || [Curation de marques partenaires.] || [Curation of partner brands.]
+[Em breve] || = || [Próximamente] || [Bientôt] || [Coming soon]
+[FOTO] || = || [FOTO] || [PHOTO] || [PHOTO]
+[Frase curta de quem testou.] || [Frase curta de quem testou.] || [Frase corta de quien lo probó.] || [Courte phrase de la personne qui a testé.] || [Short quote from the tester.]
+[ingredientes] || = || [ingredientes] || [ingrédients] || [ingredients]
+[instruções] || = || [instrucciones] || [instructions] || [instructions]
+[itens do kit] || = || [artículos del kit] || [éléments du kit] || [kit items]
+[Kit de bolsa] || [Kit de mala] || [Kit de bolso] || [Kit de sac] || [Bag kit]
+[Legenda do vídeo: anéis e capas, o que muda.] || [Legenda do vídeo: anéis e capas, o que muda.] || [Pie del vídeo: anillos y fundas, qué cambia.] || [Légende de la vidéo : anneaux et gaines, ce qui change.] || [Video caption: rings and sleeves, what changes.]
+[Legenda do vídeo: para começar, um bom caminho.] || [Legenda do vídeo: para começar, um bom caminho.] || [Pie del vídeo: para empezar, un buen camino.] || [Légende de la vidéo : pour commencer, un bon chemin.] || [Video caption: a good way to start.]
+[Legenda do vídeo: para quem está começando.] || [Legenda do vídeo: para quem está a começar.] || [Pie del vídeo: para quien está empezando.] || [Légende de la vidéo : pour celles et ceux qui débutent.] || [Video caption: for beginners.]
+[Legenda do vídeo: prazer a dois, sem pressa.] || [Legenda do vídeo: prazer a dois, sem pressa.] || [Pie del vídeo: placer en pareja, sin prisa.] || [Légende de la vidéo : plaisir à deux, sans hâte.] || [Video caption: pleasure for two, no rush.]
+[Legenda do vídeo: primeira impressão do vibrador externo.] || [Legenda do vídeo: primeira impressão do vibrador externo.] || [Pie del vídeo: primera impresión del vibrador externo.] || [Légende de la vidéo : première impression du vibromasseur externe.] || [Video caption: first impressions of the external vibrator.]
+[Legenda do vídeo: review completa em vidro.] || [Legenda do vídeo: review completa em vidro.] || [Pie del vídeo: reseña completa en vidrio.] || [Légende de la vidéo : test complet en verre.] || [Video caption: full glass review.]
+[Legenda do vídeo: sensação e kink, passo a passo.] || [Legenda do vídeo: sensação e kink, passo a passo.] || [Pie del vídeo: sensación y kink, paso a paso.] || [Légende de la vidéo : sensation et kink, pas à pas.] || [Video caption: sensation and kink, step by step.]
+[Legenda do vídeo: textura e duração do lubrificante.] || [Legenda do vídeo: textura e duração do lubrificante.] || [Pie del vídeo: textura y duración del lubricante.] || [Légende de la vidéo : texture et durée du lubrifiant.] || [Video caption: lubricant texture and longevity.]
+[Lubrificante à base d'água] || [Lubrificante à base de água] || [Lubricante a base de agua] || [Lubrifiant à base d'eau] || [Water-based lubricant]
+[Marca] || = || [Marca] || [Marque] || [Brand]
+[material] || = || [material] || [matériau] || [material]
+[medidas] || = || [medidas] || [dimensions] || [dimensions]
+[Nome do produto] || = || [Nombre del producto] || [Nom du produit] || [Product name]
+[nome] || = || [nombre] || [nom] || [name]
+[O selo benza approved.] || = || [El sello benza approved.] || [Le label benza approved.] || [The benza approved seal.]
+[Óleo de massagem] || = || [Aceite de masaje] || [Huile de massage] || [Massage oil]
+[Pergunta da comunidade sobre começar.] || [Pergunta da comunidade sobre começar.] || [Pregunta de la comunidad sobre cómo empezar.] || [Question de la communauté sur le fait de débuter.] || [Community question about getting started.]
+[Pergunta sobre cuidado e higiene.] || = || [Pregunta sobre cuidado e higiene.] || [Question sur les soins et l'hygiène.] || [Question about care and hygiene.]
+[Pergunta sobre lubrificantes.] || = || [Pregunta sobre lubricantes.] || [Question sur les lubrifiants.] || [Question about lubricants.]
+[Pergunta sobre prazer a dois.] || = || [Pregunta sobre placer en pareja.] || [Question sur le plaisir à deux.] || [Question about pleasure for two.]
+[ponto forte] || = || [punto fuerte] || [point fort] || [strength]
+[ponto fraco] || = || [punto débil] || [point faible] || [weakness]
+[PREÇO] || = || [PRECIO] || [PRIX] || [PRICE]
+[Protótipo] Cadastro registrado só neste navegador — nada foi enviado. || [Protótipo] Registo guardado só neste navegador — nada foi enviado. || [Prototipo] Registro guardado solo en este navegador — no se envió nada. || [Prototype] Inscription enregistrée uniquement dans ce navigateur — rien n’a été envoyé. || [Prototype] Sign-up saved only in this browser — nothing was sent.
+[Protótipo] Pergunta registrada só neste navegador — nada foi enviado. || [Protótipo] Pergunta guardada só neste navegador — nada foi enviado. || [Prototipo] Pregunta guardada solo en este navegador — no se envió nada. || [Prototype] Question enregistrée uniquement dans ce navigateur — rien n’a été envoyé. || [Prototype] Question saved only in this browser — nothing was sent.
+[Quem testa, por quanto tempo e em que condições.] || = || [Quién prueba, durante cuánto tiempo y en qué condiciones.] || [Qui teste, pendant combien de temps et dans quelles conditions.] || [Who tests, for how long and under what conditions.]
+[Resposta da benza, sem vergonha e sem jargão.] || = || [Respuesta de benza, sin vergüenza y sin jerga.] || [Réponse de benza, sans gêne et sans jargon.] || [benza's answer, no shame and no jargon.]
+[Resposta da benza.] || = || [Respuesta de benza.] || [Réponse de benza.] || [benza's answer.]
+[Resumo curto do produto] || = || [Resumen corto del producto] || [Court résumé du produit] || [Short product summary]
+[Review honesta: o que funciona e o que não funciona.] || = || [Reseña honesta: lo que funciona y lo que no.] || [Test honnête : ce qui marche et ce qui ne marche pas.] || [Honest review: what works and what doesn't.]
+[Reviews feitas por quem usa.] || = || [Reseñas hechas por quien las usa.] || [Des tests faits par celles et ceux qui utilisent.] || [Reviews by the people who use them.]
+[silicone de grau médico] || = || [silicona de grado médico] || [silicone de qualité médicale] || [medical-grade silicone]
+[Só então o produto ganha o selo.] || = || [Solo entonces el producto recibe el sello.] || [Ce n'est qu'alors que le produit obtient le label.] || [Only then does the product earn the seal.]
+[tamanho] || = || [tamaño] || [taille] || [size]
+[tempo] || = || [tiempo] || [durée] || [time]
+[Testador 02] || = || [Probador 02] || [Testeur 02] || [Tester 02]
+[Testadora 01] || = || [Probadora 01] || [Testeuse 01] || [Tester 01]
+[Testadora 03] || = || [Probadora 03] || [Testeuse 03] || [Tester 03]
+[Título do artigo para quem está começando] || [Título do artigo para quem está a começar] || [Título del artículo para quien está empezando] || [Titre de l'article pour celles et ceux qui débutent] || [Article title for beginners]
+[Título do artigo sobre cuidado íntimo] || = || [Título del artículo sobre cuidado íntimo] || [Titre de l'article sur les soins intimes] || [Article title about intimate care]
+[Título do artigo sobre o corpo] || = || [Título del artículo sobre el cuerpo] || [Titre de l'article sur le corps] || [Article title about the body]
+[Título do artigo sobre rituais] || = || [Título del artículo sobre rituales] || [Titre de l'article sur les rituels] || [Article title about rituals]
+[TOTAL] || = || = || = || =
+[Vibrador externo] || = || [Vibrador externo] || [Vibromasseur externe] || [External vibrator]
+[Vídeo em breve] || = || [Vídeo próximamente] || [Vidéo bientôt disponible] || [Video coming soon]
+{count} aprovados || = || {count} aprobados || {count} approuvés || {count} approved
+{count} em vídeo || = || {count} en vídeo || {count} en vidéo || {count} on video
+{count} produtos aprovados || = || {count} productos aprobados || {count} produits approuvés || {count} approved products
+{count} resultados || = || {count} resultados || {count} résultats || {count} results
+{count} reviews · ver a comunidade → || = || {count} reseñas · ver la comunidad → || {count} tests · voir la communauté → || {count} reviews · see the community →
+{n} reviews · {platforms} || = || {n} reseñas · {platforms} || {n} tests · {platforms} || {n} reviews · {platforms}
+{name} · testado pela comunidade benza. || = || {name} · probado por la comunidad benza. || {name} · testé par la communauté benza. || {name} · tested by the benza community.
+{tester} · {handle} · testou por {time} || = || {tester} · {handle} · probó durante {time} || {tester} · {handle} · a testé pendant {time} || {tester} · {handle} · tested for {time}
+@[perfil] || = || @[perfil] || @[profil] || @[profile]
+@[perfil1] || = || @[perfil1] || @[profil1] || @[profile1]
+@[perfil2] || = || @[perfil2] || @[profil2] || @[profile2]
+@[perfil3] || = || @[perfil3] || @[profil3] || @[profile3]
+@seu-perfil (opcional) || @teu-perfil (opcional) || @tu-perfil (opcional) || @votre-profil (facultatif) || @your-profile (optional)
+← Continuar explorando || = || ← Seguir explorando || ← Continuer à explorer || ← Keep exploring
+← Voltar || = || ← Volver || ← Retour || ← Back
+✓ Approved · {line} || = || = || = || =
+13 peças · [conceito] || = || 13 piezas · [concepto] || 13 pièces · [concept] || 13 pieces · [concept]
+18 anos || = || 18 años || 18 ans || 18 years old
+2 semanas || = || 2 semanas || 2 semaines || 2 weeks
+3 itens || 3 itens || 3 artículos || 3 éléments || 3 items
+3 semanas || = || 3 semanas || 3 semaines || 3 weeks
+4 semanas || = || 4 semanas || 4 semaines || 4 weeks
+5 semanas || = || 5 semanas || 5 semaines || 5 weeks
+6 semanas || = || 6 semanas || 6 semaines || 6 weeks
+A benza é um marketplace curado de sex wellness. Não fabricamos: selecionamos, testamos e aprovamos. [Texto do manifesto a definir.] || = || benza es un marketplace curado de sex wellness. No fabricamos: seleccionamos, probamos y aprobamos. [Texto del manifiesto por definir.] || benza est une marketplace curatée de sex wellness. Nous ne fabriquons pas : nous sélectionnons, testons et approuvons. [Texte du manifeste à définir.] || benza is a curated sex wellness marketplace. We don't manufacture: we select, test and approve. [Manifesto text to be defined.]
+A benza nasceu de uma comunidade. Cada produto é testado por pessoas reais, filmado e contado sem vergonha e sem jargão, antes de ganhar o selo. || = || benza nació de una comunidad. Cada producto lo prueban personas reales, se filma y se cuenta sin vergüenza y sin jerga, antes de ganar el sello. || benza est née d'une communauté. Chaque produit est testé par de vraies personnes, filmé et raconté sans gêne et sans jargon, avant d'obtenir le label. || benza was born from a community. Every product is tested by real people, filmed and told with no shame and no jargon, before it earns the seal.
+A benza vende produtos de bem-estar sexual para adultos. [Texto legal a definir.] || = || benza vende productos de bienestar sexual para adultos. [Texto legal por definir.] || benza vend des produits de bien-être sexuel pour adultes. [Texte légal à définir.] || benza sells sexual wellness products for adults. [Legal text to be defined.]
+A dois || = || En pareja || À deux || Together
+A dois e mais || = || En pareja y más || À deux et plus || Together and more
+a faísca, o convite, a bolsa pronta || a faísca, o convite, a mala pronta || la chispa, la invitación, el bolso listo || l'étincelle, l'invitation, le sac prêt || the spark, the invitation, the bag ready
+A marca fora da tela: pôsteres, cartões de design review e pranchas de clima. || A marca fora do ecrã: pósteres, cartões de design review e pranchas de clima. || La marca fuera de la pantalla: pósteres, tarjetas de design review y láminas de ambiente. || La marque hors de l'écran : affiches, cartes de design review et planches d'ambiance. || The brand off-screen: posters, design review cards and mood boards.
+A marca fora da tela: pôsteres, cartões e pranchas. Um mesmo olhar para o detalhe, em escalas diferentes. || A marca fora do ecrã: pósteres, cartões e pranchas. O mesmo olhar para o detalhe, em escalas diferentes. || La marca fuera de la pantalla: pósteres, tarjetas y láminas. Una misma mirada al detalle, en escalas distintas. || La marque hors de l'écran : affiches, cartes et planches. Un même regard sur le détail, à différentes échelles. || The brand off-screen: posters, cards and boards. One eye for detail, at different scales.
+A review || = || La reseña || Le test || The review
+Abrir menu || = || Abrir menú || Ouvrir le menu || Open menu
+Acessórios || = || Accesorios || Accessoires || Accessories
+Acima de R$ 250 || = || Más de R$ 250 || Plus de R$ 250 || Over R$ 250
+Adicionar à sacola || Adicionar ao cesto || Añadir a la bolsa || Ajouter au sac || Add to bag
+Adicionar os três à sacola || Adicionar os três ao cesto || Añadir los tres a la bolsa || Ajouter les trois au sac || Add all three to bag
+água, pele, o depois que importa || = || agua, piel, el después que importa || eau, peau, l'après qui compte || water, skin, the after that matters
+Água, pele, o depois que importa || = || Agua, piel, el después que importa || Eau, peau, l'après qui compte || Water, skin, the after that matters
+Ainda não sei || = || Todavía no lo sé || Je ne sais pas encore || I'm not sure yet
+Anal || = || = || = || =
+Anéis & capas || = || Anillos y fundas || Anneaux & gaines || Rings & sleeves
+Anterior || = || Anterior || Précédent || Previous
+antes de saber || = || antes de saber || avant de savoir || before knowing
+Antes de saber o que vai acontecer || = || Antes de saber qué va a pasar || Avant de savoir ce qui va arriver || Before you know what will happen
+Ânus || = || Ano || Anus || Anus
+Ânus e períneo || = || Ano y periné || Anus et périnée || Anus and perineum
+Aplicações || = || Aplicaciones || Applications || Applications
+aplicações — benza || = || aplicaciones — benza || applications — benza || applications — benza
+Approved || = || = || = || =
+aprovados || = || aprobados || approuvés || approved
+aprovamos || = || aprobamos || approuvons || approve
+Aprovamos || = || Aprobamos || Nous approuvons || We approve
+Arneses || = || = || Harnais || Harnesses
+Aromaterapia || = || = || Aromathérapie || Aromatherapy
+Arte || = || = || Art || Art
+As linhas || = || Las líneas || Les lignes || The lines
+As quatro || = || Las cuatro || Les quatre || The four
+ask benza || = || = || = || =
+Ask Benza || = || = || = || =
+Ask Benza · conselho de amiga || Ask Benza · conselho de amiga || Ask Benza · consejo de amiga || Ask Benza · conseil d'amie || Ask Benza · advice from a friend
+Assistir: {caption} || = || Ver: {caption} || Regarder : {caption} || Watch: {caption}
+Até R$ 100 || = || Hasta R$ 100 || Jusqu'à R$ 100 || Up to R$ 100
+Aumentar {name} || = || Aumentar {name} || Augmenter {name} || Increase {name}
+baixa luz, uma fonte só, a noite inteira || luz baixa, uma única fonte, a noite inteira || luz baja, una sola fuente, toda la noche || lumière basse, une seule source, toute la nuit || low light, a single source, all night long
+Banho & ervas || = || Baño y hierbas || Bain & herbes || Bath & herbs
+Bem-estar pélvico || = || Bienestar pélvico || Bien-être pelvien || Pelvic wellness
+benza — the good kind of secret || = || = || = || =
+BENZA Approved || = || = || = || =
+BENZA Approved ✓ || = || = || = || =
+benza, página inicial || = || benza, página de inicio || benza, page d'accueil || benza, home page
+benza, the good kind of secret || = || = || = || =
+Boca mordendo manga verde, anéis dourados || = || Boca mordiendo un mango verde, anillos dorados || Bouche croquant une mangue verte, bagues dorées || Mouth biting a green mango, gold rings
+botânicos, folha, o próprio corpo || = || botánicos, hoja, el propio cuerpo || botaniques, feuille, son propre corps || botanicals, leaf, your own body
+busca — benza || = || búsqueda — benza || recherche — benza || search — benza
+Buscar || = || Buscar || Rechercher || Search
+Cada produto aprovado ganha um olhar de design: forma, cor, material. Menos ficha técnica, mais objeto de desejo. || = || Cada producto aprobado recibe una mirada de diseño: forma, color, material. Menos ficha técnica, más objeto de deseo. || Chaque produit approuvé reçoit un regard de design : forme, couleur, matière. Moins de fiche technique, plus d'objet de désir. || Every approved product gets a design lens: shape, color, material. Less spec sheet, more object of desire.

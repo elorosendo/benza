@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useT } from "@/lib/i18n/client";
 
 // Compartilhar: copiar link e WhatsApp. Sem rastreadores de terceiros.
 export function ShareButtons({ path, text }: { path: string; text: string }) {
+  const t = useT();
   const [copied, setCopied] = useState(false);
   const url = () => `${window.location.origin}${path}`;
 
@@ -27,8 +29,7 @@ export function ShareButtons({ path, text }: { path: string; text: string }) {
         {copied ? "Link copiado ✓" : "Copiar link"}
       </button>
       <button type="button" onClick={whatsapp} className={btn}>
-        WhatsApp
-      </button>
+        {t("WhatsApp")}</button>
     </div>
   );
 }

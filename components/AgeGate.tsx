@@ -1,11 +1,13 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/client";
 
 const KEY = "benza-18";
 
 // Placeholder da validação de idade (+18): só uma confirmação guardada neste navegador.
 export function AgeGate() {
+  const t = useT();
   const ref = useRef<HTMLDialogElement>(null);
   const [open, setOpen] = useState(false);
 
@@ -41,18 +43,14 @@ export function AgeGate() {
     >
       <p className="chip label text-accent">+18</p>
       <h2 id="age-title" className="mt-4 text-5xl leading-[0.95]">
-        Você tem <em>18 anos</em> ou mais?
-      </h2>
+        {t("Você tem")}{" "}<em>{t("18 anos")}</em> {" "}{t("ou mais?")}</h2>
       <p className="mt-4 leading-relaxed text-sand-muted">
-        A benza vende produtos de bem-estar sexual para adultos. [Texto legal a definir.]
-      </p>
+        {t("A benza vende produtos de bem-estar sexual para adultos. [Texto legal a definir.]")}</p>
       <div className="mt-8 flex flex-wrap gap-2.5">
         <button type="button" onClick={confirm} className="btn bg-red text-white hover:opacity-90">
-          Tenho 18 anos ou mais
-        </button>
+          {t("Tenho 18 anos ou mais")}</button>
         <a href="https://www.google.com" className="btn border border-sand/60 hover:bg-sand hover:text-ink">
-          Sair
-        </a>
+          {t("Sair")}</a>
       </div>
     </dialog>
   );

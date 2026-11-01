@@ -117,9 +117,9 @@ export function formatCount(n: number): string {
 }
 
 // Preço 0 = ainda sem valor definido: mantém o placeholder visível.
-export function formatPrice(price: number): string {
-  if (!price) return "[PREÇO]";
-  return price.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+export function formatPrice(price: number, locale: string, t: (k: string) => string): string {
+  if (!price) return t("[PREÇO]");
+  return price.toLocaleString(locale, { style: "currency", currency: "BRL" });
 }
 
 export const linePhotoAlt: Record<LineSlug, string> = {
@@ -220,4 +220,12 @@ export function relatedProducts(p: Product, limit = 4): Product[] {
   return getProducts()
     .filter((x) => x.slug !== p.slug && x.line === p.line)
     .slice(0, limit);
+}
+
+// Produtos com a categoria-mãe (prazer, cuidado-intimo, no-clima, ...), usados por quiz e IA simulada.
+export function getProductsWithParent(): (Product & { parent: string })[] {
+  const parentOf: Record<string, string> = {};
+  for (const c of getCategories())
+    for (const g of c.groups ?? []) for (const s of g.children) parentOf[s.slug] ??= c.slug;
+  return getProducts().map((p) => ({ ...p, parent: parentOf[p.category] ?? "" }));
 }

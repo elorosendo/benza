@@ -1,10 +1,12 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/Link";
 import { categoryHref, type Category, type Line } from "@/lib/catalog";
 import { Wordmark, Tagline } from "./Wordmark";
 import { socialLinks } from "@/lib/socialLinks";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useHomeVariant } from "@/lib/useHomeVariant";
+import { useT } from "@/lib/i18n/client";
 
 export function Footer({
   categories,
@@ -13,6 +15,7 @@ export function Footer({
   categories: Category[];
   lines: Line[];
 }) {
+  const t = useT();
   const variant = useHomeVariant();
   const bg = variant === 3 ? "bg-olive" : "";
   const link = "inline-flex min-h-[var(--tap)] items-center hover:text-accent lg:min-h-0";
@@ -35,16 +38,16 @@ export function Footer({
             ))}
           </ul>
         </div>
-        <nav aria-label="Loja" className="flex flex-col gap-1 lg:gap-2">
-          <span className={title}>Loja</span>
+        <nav aria-label={t("Loja")} className="flex flex-col gap-1 lg:gap-2">
+          <span className={title}>{t("Loja")}</span>
           {categories.map((c) => (
             <Link key={c.slug} href={categoryHref(c.slug)} className={link}>
-              {c.name}
+              {t(c.name)}
             </Link>
           ))}
         </nav>
-        <nav aria-label="Linhas" className="flex flex-col gap-1 lg:gap-2">
-          <span className={title}>Linhas</span>
+        <nav aria-label={t("Linhas")} className="flex flex-col gap-1 lg:gap-2">
+          <span className={title}>{t("Linhas")}</span>
           {lines.map((l) => (
             <Link key={l.slug} href={`/linhas/${l.slug}`} className={link}>
               {l.name}
@@ -53,14 +56,17 @@ export function Footer({
         </nav>
         <nav aria-label="BENZA" className="flex flex-col gap-1 lg:gap-2">
           <span className={title}>BENZA</span>
-          <Link href="/ask-benza" className={link}>Ask Benza</Link>
-          <Link href="/approved" className={link}>Como aprovamos</Link>
-          <Link href="/sobre" className={link}>Sobre</Link>
-          <Link href="/quiz" className={link}>Quiz</Link>
-          <Link href="/comunidade" className={link}>Comunidade</Link>
-          <Link href="/aplicacoes" className={link}>Aplicações</Link>
-          <Link href="/sobre#envio" className={link}>Envio discreto</Link>
+          <Link href="/ask-benza" className={link}>{t("Ask Benza")}</Link>
+          <Link href="/approved" className={link}>{t("Como aprovamos")}</Link>
+          <Link href="/sobre" className={link}>{t("Sobre")}</Link>
+          <Link href="/quiz" className={link}>{t("Quiz")}</Link>
+          <Link href="/comunidade" className={link}>{t("Comunidade")}</Link>
+          <Link href="/aplicacoes" className={link}>{t("Aplicações")}</Link>
+          <Link href="/sobre#envio" className={link}>{t("Envio discreto")}</Link>
         </nav>
+      </div>
+      <div className="container-benza flex flex-wrap items-center justify-between gap-4 border-t border-[var(--sand-line)] py-5 text-sm">
+        <LanguageSwitcher variant="list" />
       </div>
     </footer>
   );

@@ -237,3 +237,32 @@ h1 em, h2 em, h3 em, .font-display em {
 .part:focus-visible .part-n {
   color: var(--ink);
 }
+
+/* Rolagem suave e entradas animadas (desligadas com "reduzir movimento"). */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .reveal .reveal-item {
+    opacity: 0;
+    translate: 0 56px;
+    transition:
+      opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+      translate 1s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal.is-visible .reveal-item {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .reveal .reveal-child {
+    opacity: 0;
+    translate: 0 36px;
+    transition:
+      opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms),
+      translate 0.9s cubic-bezier(0.22, 1, 0.36, 1) var(--d, 0ms);
+  }
+  .reveal.is-visible .reveal-child {
+    opacity: 1;
+    translate: 0 0;
+  }
+}

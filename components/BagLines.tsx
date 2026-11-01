@@ -1,14 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/Link";
 import { formatPrice } from "@/lib/catalog";
 import { useCart } from "@/lib/cart";
+import { useLocale, useT } from "@/lib/i18n/client";
 
 export function BagLines({ onNavigate }: { onNavigate?: () => void }) {
+  const t = useT();
+  const locale = useLocale();
   const { lines, setQty, remove } = useCart();
   if (!lines.length) {
-    return <p className="font-display text-3xl">Sua sacola está <em>vazia.</em></p>;
+    return <p className="font-display text-3xl">{t("Sua sacola está")}{" "}<em>{t("vazia.")}</em></p>;
   }
   const step =
     "inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center hover:text-accent";
@@ -28,22 +31,21 @@ export function BagLines({ onNavigate }: { onNavigate?: () => void }) {
               <Link href={`/produto/${l.slug}`} onClick={onNavigate} className="font-medium hover:underline">
                 {l.name}
               </Link>
-              <span className="shrink-0 font-mono text-[13px]">{formatPrice(l.price)}</span>
+              <span className="shrink-0 font-mono text-[13px]">{formatPrice(l.price, locale, t)}</span>
             </div>
             <span className="text-sm opacity-75">{l.brand}</span>
             <div className="mt-auto flex items-center justify-between">
               <div className="-ml-3 inline-flex items-center">
-                <button type="button" aria-label={`Diminuir ${l.name}`} className={step} onClick={() => setQty(l.slug, l.qty - 1)}>
+                <button type="button" aria-label={t("Diminuir {name}", { name: l.name })} className={step} onClick={() => setQty(l.slug, l.qty - 1)}>
                   −
                 </button>
                 <span className="w-6 text-center font-mono text-sm" aria-live="polite">{l.qty}</span>
-                <button type="button" aria-label={`Aumentar ${l.name}`} className={step} onClick={() => setQty(l.slug, l.qty + 1)}>
+                <button type="button" aria-label={t("Aumentar {name}", { name: l.name })} className={step} onClick={() => setQty(l.slug, l.qty + 1)}>
                   +
                 </button>
               </div>
               <button type="button" onClick={() => remove(l.slug)} className="label min-h-[var(--tap)] underline underline-offset-4 hover:text-accent">
-                Remover
-              </button>
+                {t("Remover")}</button>
             </div>
           </div>
         </li>

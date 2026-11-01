@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/Link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -12,6 +12,8 @@ import {
 import { Wordmark } from "./Wordmark";
 import { MobileNav } from "./MobileNav";
 import { BagLink } from "./BagLink";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useT } from "@/lib/i18n/client";
 
 type Props = {
   categories: Category[];
@@ -20,6 +22,7 @@ type Props = {
 };
 
 export function Header({ categories, lines, menuLines }: Props) {
+  const t = useT();
   const [open, setOpen] = useState<string | null>(null);
   const [drawer, setDrawer] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
@@ -49,7 +52,7 @@ export function Header({ categories, lines, menuLines }: Props) {
     : undefined;
 
   const navLink =
-    "min-h-[var(--tap)] items-center text-sm hover:text-accent";
+    "min-h-[var(--tap)] items-center whitespace-nowrap text-sm hover:text-accent";
 
   return (
     <header
@@ -67,7 +70,7 @@ export function Header({ categories, lines, menuLines }: Props) {
           <button
             type="button"
             className="-ml-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center"
-            aria-label="Abrir menu"
+            aria-label={t("Abrir menu")}
             aria-expanded={drawer}
             aria-controls="mobile-nav"
             onClick={() => setDrawer(true)}
@@ -79,7 +82,7 @@ export function Header({ categories, lines, menuLines }: Props) {
         </div>
 
         {/* Desktop: categorias */}
-        <nav aria-label="Categorias" className={`hidden flex-1 gap-[26px] lg:flex`}>
+        <nav aria-label={t("Categorias")} className={`hidden flex-1 gap-5 lg:flex xl:gap-[26px]`}>
           {categories.map((c) => {
             const hasMenu = !!c.groups?.length;
             const isOpen = open === c.slug && hasMenu;
@@ -101,32 +104,28 @@ export function Header({ categories, lines, menuLines }: Props) {
                   }
                 }}
               >
-                {c.name}
+                {t(c.name)}
               </Link>
             );
           })}
         </nav>
 
-        <Link href="/" aria-label="benza, página inicial" className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
+        <Link href="/" aria-label={t("benza, página inicial")} className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
           <Wordmark height={36} priority />
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-2 lg:gap-[22px]">
           <Link href="/linhas" className={`${navLink} hidden lg:inline-flex`}>
-            Linhas
-          </Link>
+            {t("Linhas")}</Link>
           <Link href="/ask-benza" className={`${navLink} hidden lg:inline-flex`}>
-            Ask Benza
-          </Link>
-          <Link href="/comunidade" className={`${navLink} hidden lg:inline-flex`}>
-            Comunidade
-          </Link>
-          <Link href="/aplicacoes" className={`${navLink} hidden lg:inline-flex`}>
-            Aplicações
-          </Link>
+            {t("Ask Benza")}</Link>
+          <Link href="/comunidade" className={`${navLink} hidden xl:inline-flex`}>
+            {t("Comunidade")}</Link>
+          <Link href="/aplicacoes" className={`${navLink} hidden xl:inline-flex`}>
+            {t("Aplicações")}</Link>
           <Link
             href="/busca"
-            aria-label="Buscar"
+            aria-label={t("Buscar")}
             className="inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center hover:text-accent"
           >
             <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
@@ -134,6 +133,7 @@ export function Header({ categories, lines, menuLines }: Props) {
               <path d="M20 20l-4-4" />
             </svg>
           </Link>
+          <LanguageSwitcher className="hidden lg:block" />
           <BagLink className="inline-flex min-h-[var(--tap)] items-center font-mono text-xs uppercase tracking-[0.08em] hover:text-accent" />
         </div>
       </div>
@@ -144,11 +144,10 @@ export function Header({ categories, lines, menuLines }: Props) {
           <div className="container-benza grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 pb-10 pt-9">
             {active.groups!.map((g, i) => (
               <div key={g.label} className="flex flex-col gap-2.5">
-                <span className="label text-accent">{g.label}</span>
+                <span className="label text-accent">{t(g.label)}</span>
                 {i === 0 && (
                   <Link href={categoryHref(active.slug)} className="hover:text-accent" onClick={() => setOpen(null)}>
-                    Ver tudo
-                  </Link>
+                    {t("Ver tudo")}</Link>
                 )}
                 {g.children.map((s) => (
                   <Link
@@ -157,7 +156,7 @@ export function Header({ categories, lines, menuLines }: Props) {
                     className="hover:text-accent"
                     onClick={() => setOpen(null)}
                   >
-                    {s.name}
+                    {t(s.name)}
                   </Link>
                 ))}
               </div>
@@ -170,13 +169,13 @@ export function Header({ categories, lines, menuLines }: Props) {
               >
                 <Image
                   src={`/assets/photos/${activeLine.photo}`}
-                  alt={`Foto da linha ${activeLine.name}`}
+                  alt={t("Foto da linha {name}", { name: activeLine.name })}
                   fill
                   sizes="300px"
                   className="object-cover"
                 />
                 <span className="absolute bottom-3.5 left-4 font-display text-2xl text-sand">
-                  Linha {activeLine.name} →
+                  {t("Linha {name} →", { name: activeLine.name })}
                 </span>
               </Link>
             )}

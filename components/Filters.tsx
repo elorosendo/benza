@@ -1,11 +1,13 @@
 "use client";
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useT } from "@/lib/i18n/client";
 
 type Option = { slug: string; label: string };
 export type FilterGroup = { key: string; label: string; options: Option[] };
 
 export function Filters({ groups }: { groups: FilterGroup[] }) {
+  const t = useT();
   const router = useRouter();
   const pathname = usePathname();
   const params = useSearchParams();
@@ -53,8 +55,7 @@ export function Filters({ groups }: { groups: FilterGroup[] }) {
           onClick={() => router.replace(pathname, { scroll: false })}
           className="label self-start underline underline-offset-4 hover:text-accent-dark"
         >
-          Limpar filtros
-        </button>
+          {t("Limpar filtros")}</button>
       )}
     </div>
   );

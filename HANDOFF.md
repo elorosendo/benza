@@ -1,5 +1,7 @@
 # BENZA — Handoff para protótipo navegável
 
+> **Idiomas:** o site tem 5 idiomas (pt-BR base, pt-PT, es-ES, fr-FR, en-US), com rota por idioma (`/pt-br`, `/pt-pt`, `/es-es`, `/fr-fr`, `/en-us`). Os textos no código estão em pt-BR e funcionam como chave: `t("texto")`. As traduções ficam em `scripts/translations/*.txt` (colunas: pt-BR || pt-PT || es-ES || fr-FR || en-US) e `python3 scripts/i18n-build.py` gera `lib/i18n/dict/*.ts`. Em desenvolvimento, chave sem tradução gera o aviso `[i18n] sem tradução`. As traduções são de primeira versão e precisam de revisão por falantes nativos.
+
 > **Atualização — branding v2 (out/2026):** o novo branding (logo "benza" em minúsculas, selo Approved, vermelho `#D3301B`, cartões arredondados, Gaya nos títulos) substitui as regras da §3 e as cores das linhas da §4. A fonte de verdade agora é `tokens.json`/`tokens.css`. Logos e selo ficam em `public/assets/brand/` (originais em `assets/brand-v2/`). O site usa somente **duas famílias: Outfit (títulos e texto) e Gaya (tagline, ênfases e detalhes)**. A Gaya está em licença de teste: fica só local em `public/fonts/gaya/` (no `.gitignore`); sem ela, esses trechos caem numa serifada genérica.
 
 > Para o Claude Code: leia este arquivo inteiro antes de começar. Depois leia `tokens.json`, `tokens.css`, `data/taxonomy.json`, `data/products.sample.json` e abra os HTMLs em `reference/` como referência visual exata.

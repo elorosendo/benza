@@ -1,11 +1,13 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/Link";
 import { useState } from "react";
 import { categoryHref, type Category } from "@/lib/catalog";
 import { Wordmark } from "./Wordmark";
 import { MobileNav } from "./MobileNav";
 import { BagLink } from "./BagLink";
+import { LanguageSwitcher } from "./LanguageSwitcher";
+import { useT } from "@/lib/i18n/client";
 
 // Headers das variações V2 (Dia, claro) e V3 (Expressiva, Mata). Sem mega menu, como na referência.
 export function HeaderAlt({
@@ -15,6 +17,7 @@ export function HeaderAlt({
   variant: 2 | 3;
   categories: Category[];
 }) {
+  const t = useT();
   const [drawer, setDrawer] = useState(false);
   const light = variant === 2;
   const link = "min-h-[var(--tap)] items-center text-sm font-medium hover:text-accent";
@@ -35,7 +38,7 @@ export function HeaderAlt({
         <button
           type="button"
           className="-ml-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center lg:hidden"
-          aria-label="Abrir menu"
+          aria-label={t("Abrir menu")}
           aria-expanded={drawer}
           aria-controls="mobile-nav-alt"
           onClick={() => setDrawer(true)}
@@ -46,33 +49,34 @@ export function HeaderAlt({
         </button>
 
         {light && (
-          <Link href="/" aria-label="benza, página inicial" className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
+          <Link href="/" aria-label={t("benza, página inicial")} className="flex min-h-[var(--tap)] shrink-0 items-center leading-[0]">
             <Wordmark height={30} priority />
           </Link>
         )}
 
-        <nav aria-label="Categorias" className={`hidden gap-[26px] lg:flex ${light ? "" : "flex-1"}`}>
+        <nav aria-label={t("Categorias")} className={`hidden gap-[26px] lg:flex ${light ? "" : "flex-1"}`}>
           {categories.map((c) => (
             <Link key={c.slug} href={categoryHref(c.slug)} className={`inline-flex ${link} ${linkLight}`}>
-              {c.name}
+              {t(c.name)}
             </Link>
           ))}
           {light && (
             <Link href="/linhas" className={`${italic} ${linkLight}`}>
-              (Linhas)
-            </Link>
+              {t("(Linhas)")}</Link>
           )}
         </nav>
 
         {light ? (
           <div className="flex items-center gap-[18px]">
-            <Link href="/busca" className={`${mono} hidden sm:inline-flex ${linkLight}`}>Buscar</Link>
+            <Link href="/busca" className={`${mono} hidden sm:inline-flex ${linkLight}`}>{t("Buscar")}</Link>
+            <LanguageSwitcher className="hidden lg:block" />
             <BagLink className={`${mono} ${linkLight}`} />
           </div>
         ) : (
           <div className="flex items-center gap-[22px]">
-            <Link href="/ask-benza" className={`${link} hidden lg:inline-flex`}>Ask Benza</Link>
-            <Link href="/linhas" className={`${italic} hidden hover:text-accent lg:inline-flex`}>(Linhas)</Link>
+            <Link href="/ask-benza" className={`${link} hidden lg:inline-flex`}>{t("Ask Benza")}</Link>
+            <Link href="/linhas" className={`${italic} hidden hover:text-accent lg:inline-flex`}>{t("(Linhas)")}</Link>
+            <LanguageSwitcher className="hidden lg:block" />
             <BagLink className={`${mono} hover:text-accent`} />
           </div>
         )}

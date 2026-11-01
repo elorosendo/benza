@@ -1,8 +1,10 @@
 "use client";
 
 import { useRef } from "react";
+import { useT } from "@/lib/i18n/client";
 
 export function NewApproved({ children }: { children: React.ReactNode }) {
+  const t = useT();
   const track = useRef<HTMLDivElement>(null);
   const scroll = (dir: 1 | -1) => {
     const el = track.current;
@@ -13,14 +15,14 @@ export function NewApproved({ children }: { children: React.ReactNode }) {
     "inline-flex h-12 w-12 items-center justify-center border border-ink text-lg hover:bg-ink hover:text-sand";
   return (
     <section className="bg-cream-deep text-ink">
-      <div className="container-benza py-16 sm:py-24">
+      <div className="container-benza py-24 sm:py-40">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-[clamp(40px,4vw,56px)] font-medium leading-none">
-            Novidades <em>(aprovadas)</em>
+            {t("Novidades")}{" "}<em>{t("(aprovadas)")}</em>
           </h2>
           <div className="flex gap-2">
-            <button type="button" aria-label="Anterior" className={arrow} onClick={() => scroll(-1)}>←</button>
-            <button type="button" aria-label="Próximo" className={arrow} onClick={() => scroll(1)}>→</button>
+            <button type="button" aria-label={t("Anterior")} className={arrow} onClick={() => scroll(-1)}>←</button>
+            <button type="button" aria-label={t("Próximo")} className={arrow} onClick={() => scroll(1)}>→</button>
           </div>
         </div>
         <div

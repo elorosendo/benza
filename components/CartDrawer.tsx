@@ -1,13 +1,15 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/Link";
 import { useEffect, useRef } from "react";
 import { useCart } from "@/lib/cart";
 import { BagLines } from "./BagLines";
 import { BagTotal } from "./BagTotal";
 import { CheckoutNotice } from "./CheckoutNotice";
+import { useT } from "@/lib/i18n/client";
 
 export function CartDrawer() {
+  const t = useT();
   const { drawerOpen, closeDrawer, lines } = useCart();
   const panel = useRef<HTMLDivElement>(null);
 
@@ -26,16 +28,16 @@ export function CartDrawer() {
   if (!drawerOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label="Sacola">
-      <button type="button" aria-label="Fechar sacola" className="absolute inset-0 bg-black/50" onClick={closeDrawer} />
+    <div className="fixed inset-0 z-[60]" role="dialog" aria-modal="true" aria-label={t("Sacola")}>
+      <button type="button" aria-label={t("Fechar sacola")} className="absolute inset-0 bg-black/50" onClick={closeDrawer} />
       <div
         ref={panel}
         tabIndex={-1}
         className="absolute inset-y-0 right-0 flex w-[min(440px,100vw)] flex-col bg-ink text-sand outline-none"
       >
         <div className="flex h-16 items-center justify-between px-4 sm:px-6">
-          <span className="label text-accent">Sacola</span>
-          <button type="button" aria-label="Fechar sacola" onClick={closeDrawer} className="-mr-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center">
+          <span className="label text-accent">{t("Sacola")}</span>
+          <button type="button" aria-label={t("Fechar sacola")} onClick={closeDrawer} className="-mr-3 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
               <path d="M5 5l14 14M19 5L5 19" />
             </svg>
@@ -49,8 +51,7 @@ export function CartDrawer() {
             <BagTotal />
             <div className="flex gap-2.5">
               <Link href="/sacola" onClick={closeDrawer} className="btn flex-1 justify-center border border-sand/60 hover:bg-sand hover:text-ink">
-                Ver sacola
-              </Link>
+                {t("Ver sacola")}</Link>
               <CheckoutNotice className="btn flex-1 justify-center bg-red text-white hover:opacity-90" />
             </div>
           </div>

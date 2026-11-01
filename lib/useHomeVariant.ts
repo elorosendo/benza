@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname, useSearchParams } from "next/navigation";
+import { splitPath } from "@/lib/i18n/config";
 
 export type HomeVariant = 1 | 2 | 3;
 
@@ -8,6 +9,6 @@ export type HomeVariant = 1 | 2 | 3;
 export function useHomeVariant(): HomeVariant | null {
   const pathname = usePathname();
   const v = useSearchParams().get("v");
-  if (pathname !== "/") return null;
+  if (splitPath(pathname).rest !== "/") return null;
   return v === "1" || v === "2" || v === "3" ? (Number(v) as HomeVariant) : null;
 }

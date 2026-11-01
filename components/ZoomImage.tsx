@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/client";
 
 type Props = {
   src: string;
@@ -15,6 +16,7 @@ type Props = {
 
 // Imagem que abre ampliada num diálogo (Esc ou clique fora fecham).
 export function ZoomImage({ src, alt, width, height, sizes, className = "", priority }: Props) {
+  const t = useT();
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDialogElement>(null);
 
@@ -63,7 +65,7 @@ export function ZoomImage({ src, alt, width, height, sizes, className = "", prio
             <button
               type="button"
               onClick={() => setOpen(false)}
-              aria-label="Fechar"
+              aria-label={t("Fechar")}
               className="absolute right-2 top-2 inline-flex h-[var(--tap)] w-[var(--tap)] items-center justify-center rounded-full bg-ink/80 text-sand"
             >
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
