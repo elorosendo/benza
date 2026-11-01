@@ -9,6 +9,7 @@ import { ProductCard } from "@/components/ProductCard";
 import { AskBenza } from "@/components/AskBenza";
 import { VideoReviews } from "@/components/VideoReviews";
 import { SecretIntro } from "@/components/SecretIntro";
+import { PressStrip } from "@/components/PressStrip";
 import { HomeV1 } from "@/components/variants/HomeV1";
 import { HomeV2 } from "@/components/variants/HomeV2";
 import { HomeV3 } from "@/components/variants/HomeV3";
@@ -36,6 +37,7 @@ async function HomeContent({ searchParams }: { searchParams: SearchParams }) {
     <main>
       <SecretIntro />
       <HeroSplit />
+      <PressStrip />
       <CategoryIndex categories={categories} />
       <BodyGrid category={body} />
       <LineCards lines={getLines()} />

@@ -1,0 +1,2 @@
+Destaque em || = || Destacado en || Vu dans || Featured in
+[Veículo {n}] || = || [Medio {n}] || [Média {n}] || [Publication {n}]

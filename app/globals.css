@@ -266,3 +266,11 @@ h1 em, h2 em, h3 em, .font-display em {
     translate: 0 0;
   }
 }
+
+/* Logos de imprensa como máscara: sempre na cor da marca. */
+.press-logo {
+  background-color: var(--title);
+  opacity: 0.85;
+  -webkit-mask: var(--logo) center / contain no-repeat;
+  mask: var(--logo) center / contain no-repeat;
+}
