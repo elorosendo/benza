@@ -13,9 +13,9 @@ export async function PressStrip() {
   const t = await getT();
   return (
     <section aria-label={t("Destaque em")} className="border-y border-ink/10 bg-cream text-ink">
-      <div className="container-benza flex flex-col items-center gap-8 py-14 sm:py-20 lg:flex-row lg:gap-20">
+      <div className="container-benza flex flex-col items-center justify-center gap-6 py-14 sm:py-20 lg:flex-row lg:gap-14">
         <span className="shrink-0 text-[15px] font-medium">{t("Destaque em")}</span>
-        <ul className="flex w-full flex-wrap items-center justify-center gap-x-14 gap-y-8 lg:flex-1 lg:justify-between">
+        <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
           {logos.map((l) => (
             <li key={l.name}>
               <span

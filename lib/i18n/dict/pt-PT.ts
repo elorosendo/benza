@@ -69,6 +69,7 @@ const dict: Record<string, string> = {
   "Buscar": "Buscar",
   "Cada produto aprovado ganha um olhar de design: forma, cor, material. Menos ficha técnica, mais objeto de desejo.": "Cada produto aprovado ganha um olhar de design: forma, cor, material. Menos ficha técnica, mais objeto de desejo.",
   "Característica": "Característica",
+  "Carta de tarô: {name}": "Carta de tarot: {name}",
   "Cartão 01: quatro objetos íntimos com o selo benza approved": "Cartão 01: quatro objetos íntimos com o selo benza approved",
   "Cartão 02: frasco azul-cobalto e preto da Dame": "Cartão 02: frasco azul-cobalto e preto da Dame",
   "Cartão 03: peça de vidro âmbar translúcido": "Cartão 03: peça de vidro âmbar translúcido",

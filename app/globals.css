@@ -274,3 +274,50 @@ h1 em, h2 em, h3 em, .font-display em {
   -webkit-mask: var(--logo) center / contain no-repeat;
   mask: var(--logo) center / contain no-repeat;
 }
+
+/* Cartas de tarô: flutuação suave, inclinação 3D e entrada. */
+@keyframes tarot-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -9px; }
+}
+@keyframes tarot-enter {
+  from { opacity: 0; transform: translateY(70px) rotateY(75deg); }
+  to { opacity: 1; transform: none; }
+}
+.tarot-inner {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .tarot-float {
+    animation: tarot-float 6.5s ease-in-out infinite;
+    animation-delay: var(--fd, 0s);
+  }
+  .tarot-enter {
+    animation: tarot-enter 1.1s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+}
+
+/* Carta do cartão "corpo": escondida por padrão, desce da borda de cima ao passar o mouse ou focar. */
+.part-card {
+  position: absolute;
+  right: 20px;
+  top: -240px;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    top 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+}
+.part:hover .part-card,
+.part:focus-visible .part-card,
+.part:focus-within .part-card {
+  top: -36px;
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .part-card {
+    transition: none;
+  }
+}

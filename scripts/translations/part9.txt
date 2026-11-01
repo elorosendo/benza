@@ -1,0 +1,1 @@
+Carta de tarô: {name} || Carta de tarot: {name} || Carta del tarot: {name} || Carte de tarot : {name} || Tarot card: {name}
