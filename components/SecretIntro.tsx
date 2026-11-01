@@ -15,6 +15,7 @@ export function SecretIntro() {
   const measure = useRef<HTMLDivElement>(null);
   const words = useRef<(HTMLSpanElement | null)[]>([]);
   const cue = useRef<HTMLSpanElement>(null);
+  const niche = useRef<HTMLDivElement>(null);
   const [reduced, setReduced] = useState(false);
   const [layout, setLayout] = useState<Layout>({ lines: [[0, 1, 2, 3, 4]], size: 80 });
 
@@ -64,6 +65,7 @@ export function SecretIntro() {
         el.style.opacity = String(0.22 + 0.78 * v);
         el.style.transform = `translateY(${(1 - v) * 0.22}em)`;
       });
+      if (niche.current) niche.current.style.transform = `scale(${1 + p * 0.7})`;
       if (cue.current) cue.current.style.opacity = String(1 - clamp(p * 6));
     };
     const onScroll = () => {
@@ -91,8 +93,22 @@ export function SecretIntro() {
           reduced ? "min-h-[70vh] py-16" : "sticky top-0 h-[calc(100svh-4px)]"
         }`}
       >
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+          <div
+            ref={niche}
+            className="absolute left-1/2 top-1/2 h-[min(86vh,720px)] aspect-[4/5] -translate-x-1/2 -translate-y-1/2 will-change-transform"
+            style={{ transformOrigin: "50% 60%" }}
+          >
+            <svg viewBox="0 0 400 500" className="h-full w-full" fill="none" stroke="currentColor" strokeWidth="1" opacity=".4">
+              <path d="M40 500V210a160 160 0 0 1 320 0V500" />
+              <path d="M70 500V215a130 130 0 0 1 260 0V500" />
+              <path d="M110 500V225a90 90 0 0 1 180 0V500" />
+              <path d="M10 440h380M10 470h380" />
+            </svg>
+          </div>
+        </div>
         <p
-          className="font-brand italic leading-[1.05] tracking-[-0.01em]"
+          className="relative font-brand italic leading-[1.05] tracking-[-0.01em]"
           style={{ fontSize: layout.size }}
           aria-hidden="true"
         >
@@ -114,7 +130,7 @@ export function SecretIntro() {
             </span>
           ))}
         </p>
-        <span ref={cue} className="label mt-12 text-sand/70">
+        <span ref={cue} className="label relative mt-12 text-sand/70">
           {t("Role para baixo ↓")}</span>
       </div>
 
