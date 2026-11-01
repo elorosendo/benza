@@ -1,0 +1,5 @@
+Filtros rápidos || = || Filtros rápidos || Filtres rapides || Quick filters
+Mais filtros || = || Más filtros || Plus de filtres || More filters
+Filtros || = || Filtros || Filtres || Filters
+Fechar filtros || = || Cerrar filtros || Fermer les filtres || Close filters
+Ver resultados || = || Ver resultados || Voir les résultats || See results
