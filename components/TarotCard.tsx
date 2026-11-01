@@ -3,7 +3,13 @@
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
-export type TarotName = "clitoris" | "vulva" | "penis" | "anus" | "clitorisdark" | "vulva-negative" | "clitoris-negative";
+export type TarotName = "clitoris" | "vulva" | "penis" | "anus" | "clitorisdark" | "vulva-negative" | "clitoris-negative" | "benzacard";
+
+const DIMS: Partial<Record<TarotName, [number, number]>> = {
+  "vulva-negative": [456, 667],
+  "clitoris-negative": [451, 667],
+  benzacard: [358, 631],
+};
 
 // Carta de tarô ilustrada: flutua devagar e inclina em 3D conforme o mouse (ou o toque) na área do cartão.
 // Com "reduzir movimento", fica parada.
@@ -65,8 +71,8 @@ export function TarotCard({
         <Image
           src={`/assets/cards/${name}.svg`}
           alt={alt}
-          width={name.endsWith("-negative") ? 456 : 588}
-          height={name.endsWith("-negative") ? 667 : 979}
+          width={DIMS[name]?.[0] ?? 588}
+          height={DIMS[name]?.[1] ?? 979}
           unoptimized
           priority={priority}
           className="h-auto w-full select-none"

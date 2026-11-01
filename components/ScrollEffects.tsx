@@ -70,6 +70,8 @@ export function ScrollEffects() {
     // Espera a hidratação terminar: mexer no DOM antes disso causa aviso de "hydration mismatch".
     let mo: MutationObserver | undefined;
     const start = window.setTimeout(() => {
+      ready = true;
+      parallax();
       setup();
       mo = new MutationObserver(schedule);
       mo.observe(document.body, { childList: true, subtree: true });
@@ -77,8 +79,10 @@ export function ScrollEffects() {
 
     // parallax: [data-parallax="0.08"] desloca a foto devagar em relação à rolagem
     let pRaf = 0;
+    let ready = false; // só depois da hidratação (mesmo motivo do atraso acima)
     const parallax = () => {
       pRaf = 0;
+      if (!ready) return;
       document.querySelectorAll<HTMLElement>("[data-parallax]").forEach((el) => {
         const r = el.getBoundingClientRect();
         if (r.bottom < -200 || r.top > window.innerHeight + 200) return;

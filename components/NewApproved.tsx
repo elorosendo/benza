@@ -27,7 +27,7 @@ export function NewApproved({ children }: { children: React.ReactNode }) {
         </div>
         <div
           ref={track}
-          className="-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 [&>*]:w-[70%] [&>*]:shrink-0 [&>*]:snap-start sm:[&>*]:w-[calc((100%-32px)/3)] lg:[&>*]:w-[calc((100%-48px)/4)]"
+          className="scroll-brand -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 [&>*]:w-[70%] [&>*]:shrink-0 [&>*]:snap-start sm:[&>*]:w-[calc((100%-32px)/3)] lg:[&>*]:w-[calc((100%-48px)/4)]"
         >
           {children}
         </div>

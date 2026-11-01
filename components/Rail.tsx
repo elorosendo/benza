@@ -28,7 +28,7 @@ export function Rail({
       </div>
       <div
         ref={track}
-        className={`-mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 [&>*]:shrink-0 [&>*]:snap-start ${itemClass}`}
+        className={`scroll-brand -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:mx-0 sm:px-0 [&>*]:shrink-0 [&>*]:snap-start ${itemClass}`}
       >
         {children}
       </div>

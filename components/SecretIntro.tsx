@@ -2,21 +2,19 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useT } from "@/lib/i18n/client";
+import { TarotCard } from "./TarotCard";
 
 const WORDS = ["the", "good", "kind", "of", "secret"];
-const clamp = (n: number, min = 0, max = 1) => Math.min(max, Math.max(min, n));
 
 type Layout = { lines: number[][]; size: number };
 
-// "the good kind of secret" em Gaya Italic, na largura toda; cada palavra acende com o scroll.
+// "the good kind of secret" em Gaya Italic, na largura toda; cada palavra acende em sequência após a abertura do cartão.
 export function SecretIntro() {
   const t = useT();
   const section = useRef<HTMLElement>(null);
   const measure = useRef<HTMLDivElement>(null);
-  const words = useRef<(HTMLSpanElement | null)[]>([]);
-  const cue = useRef<HTMLSpanElement>(null);
-  const niche = useRef<HTMLDivElement>(null);
   const [reduced, setReduced] = useState(false);
+  const [revealed, setRevealed] = useState(false);
   const [layout, setLayout] = useState<Layout>({ lines: [[0, 1, 2, 3, 4]], size: 80 });
 
   // Ajusta o corpo da fonte para a frase caber na largura (1 linha no desktop, 3 no mobile).
@@ -43,95 +41,107 @@ export function SecretIntro() {
     return () => window.removeEventListener("resize", fit);
   }, []);
 
+  // Abertura automática: o cartão fica no centro (sem menu) e, depois de um instante ou no primeiro gesto
+  // de scroll, sobe e dá lugar à frase e ao menu.
   useEffect(() => {
-    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(mq.matches);
-    const onChange = () => setReduced(mq.matches);
-    mq.addEventListener("change", onChange);
-    return () => mq.removeEventListener("change", onChange);
+    const root = document.documentElement;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setReduced(reduce);
+    if (reduce || window.scrollY > 40) {
+      root.dataset.intro = "done";
+      setRevealed(true);
+      return () => void delete root.dataset.intro;
+    }
+    root.dataset.intro = "hold";
+    root.style.overflow = "hidden";
+    let done = false;
+    const go = () => {
+      if (done) return;
+      done = true;
+      root.style.overflow = "";
+      root.dataset.intro = "done";
+      setRevealed(true);
+    };
+    const timer = window.setTimeout(go, 1800);
+    const events = ["wheel", "touchmove", "keydown", "pointerdown"] as const;
+    events.forEach((e) => window.addEventListener(e, go, { passive: true, once: true }));
+    return () => {
+      window.clearTimeout(timer);
+      events.forEach((e) => window.removeEventListener(e, go));
+      root.style.overflow = "";
+      delete root.dataset.intro;
+    };
   }, []);
 
-  useEffect(() => {
-    let raf = 0;
-    const update = () => {
-      raf = 0;
-      const sec = section.current;
-      if (!sec) return;
-      const r = sec.getBoundingClientRect();
-      const p = reduced ? 1 : clamp(-r.top / Math.max(1, r.height - window.innerHeight));
-      words.current.forEach((el, i) => {
-        if (!el) return;
-        const v = clamp((p + 0.1 - i * 0.15) / 0.25);
-        el.style.opacity = String(0.22 + 0.78 * v);
-        el.style.transform = `translateY(${(1 - v) * 0.22}em)`;
-      });
-      if (niche.current) niche.current.style.transform = `scale(${1 + p * 0.7})`;
-      if (cue.current) cue.current.style.opacity = String(1 - clamp(p * 6));
-    };
-    const onScroll = () => {
-      if (!raf) raf = requestAnimationFrame(update);
-    };
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-      if (raf) cancelAnimationFrame(raf);
-    };
-  }, [reduced, layout]);
+  const ease = "cubic-bezier(0.65, 0, 0.25, 1)";
+  const soft = "cubic-bezier(0.22, 1, 0.36, 1)";
+  const out = reduced ? "none" : `transform 1.9s ${ease}, opacity 1.1s ease 0.5s`;
 
   return (
     <section
       ref={section}
       data-no-reveal
       aria-label="the good kind of secret"
-      className={`relative overflow-x-clip bg-ink text-red ${reduced ? "" : "h-[260vh]"}`}
+      className="relative overflow-hidden bg-ink text-red"
     >
-      <div
-        className={`flex flex-col items-center justify-center overflow-hidden ${
-          reduced ? "min-h-[70vh] py-16" : "sticky top-0 h-[calc(100svh-4px)]"
-        }`}
-      >
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0">
-          <div
-            ref={niche}
-            className="absolute left-1/2 top-1/2 h-[min(86vh,720px)] aspect-[4/5] -translate-x-1/2 -translate-y-1/2 will-change-transform"
-            style={{ transformOrigin: "50% 60%" }}
-          >
-            <svg viewBox="0 0 400 500" className="h-full w-full" fill="none" stroke="currentColor" strokeWidth="1" opacity=".4">
-              <path d="M40 500V210a160 160 0 0 1 320 0V500" />
-              <path d="M70 500V215a130 130 0 0 1 260 0V500" />
-              <path d="M110 500V225a90 90 0 0 1 180 0V500" />
-              <path d="M10 440h380M10 470h380" />
-            </svg>
-          </div>
-        </div>
-        <p
-          className="relative font-brand italic leading-[1.05] tracking-[-0.01em]"
-          style={{ fontSize: layout.size }}
-          aria-hidden="true"
+      <div className="relative flex h-[100svh] flex-col items-center justify-center">
+        <div
+          className="absolute inset-0 flex items-center justify-center will-change-transform"
+          style={{
+            transform: revealed ? "translateY(-115vh) scale(0.94)" : "none",
+            opacity: revealed ? 0 : 1,
+            transition: out,
+          }}
         >
-          {layout.lines.map((line, li) => (
-            <span key={li} className="block whitespace-nowrap text-center">
-              {line.map((wi, k) => (
-                <span key={wi}>
-                  <span
-                    ref={(el) => {
-                      words.current[wi] = el;
-                    }}
-                    className="inline-block will-change-transform"
-                  >
-                    {WORDS[wi]}
+          <TarotCard
+            name="benzacard"
+            alt="benza"
+            width="min(40vh, 72vw, 320px)"
+            rest={7}
+            tiltZone="self"
+            priority
+          />
+        </div>
+        <div
+          className="relative will-change-transform"
+          style={{
+            transform: revealed || reduced ? "none" : "translateY(32vh)",
+            opacity: revealed || reduced ? 1 : 0,
+            transition: reduced ? "none" : `transform 2s ${soft} 0.3s, opacity 1.3s ease 0.6s`,
+          }}
+        >
+          <p
+            className="font-brand italic leading-[1.05] tracking-[-0.01em]"
+            style={{ fontSize: layout.size }}
+            aria-hidden="true"
+          >
+            {layout.lines.map((line, li) => (
+              <span key={li} className="block whitespace-nowrap text-center">
+                {line.map((wi, k) => (
+                  <span key={wi}>
+                    <span
+                      className="inline-block will-change-transform"
+                      style={{
+                        opacity: revealed || reduced ? 1 : 0.22,
+                        transform: revealed || reduced ? "none" : "translateY(0.22em)",
+                        transition: reduced ? "none" : `opacity 1s ease ${1.3 + wi * 0.2}s, transform 1s ${soft} ${1.3 + wi * 0.2}s`,
+                      }}
+                    >
+                      {WORDS[wi]}
+                    </span>
+                    {k < line.length - 1 && " "}
                   </span>
-                  {k < line.length - 1 && " "}
-                </span>
-              ))}
-            </span>
-          ))}
-        </p>
-        <span ref={cue} className="label relative mt-12 text-sand/70">
-          {t("Role para baixo ↓")}</span>
+                ))}
+              </span>
+            ))}
+          </p>
+        </div>
+        <span
+          className="label absolute bottom-10 text-sand/70 transition-opacity duration-500"
+          style={{ opacity: revealed ? 0 : 1 }}
+        >
+          {t("Role para baixo ↓")}
+        </span>
       </div>
 
       {/* medição invisível, no mesmo estilo do texto */}

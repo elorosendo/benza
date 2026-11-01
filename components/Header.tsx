@@ -140,7 +140,7 @@ export function Header({ categories, lines, menuLines }: Props) {
 
       {/* Mega menu */}
       {active && (
-        <div ref={panelRef} className="absolute inset-x-0 top-full hidden border-t border-b border-[var(--sand-line)] bg-deep lg:block">
+        <div ref={panelRef} className="mega-panel absolute inset-x-0 top-full hidden border-t border-b border-[var(--sand-line)] bg-deep lg:block">
           <div className="container-benza grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-8 pb-10 pt-9">
             {active.groups!.map((g, i) => (
               <div key={g.label} className="flex flex-col gap-2.5">

@@ -10,7 +10,7 @@ export async function VideoReviews() {
   const t = await getT();
   const reviews = getReviews().map(toCardData);
   return (
-    <section className="bg-ink text-sand">
+    <section className="bg-[#372B0A] text-sand">
       <div className="container-benza py-24 sm:py-40">
         <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
           <div className="flex flex-col gap-3">
